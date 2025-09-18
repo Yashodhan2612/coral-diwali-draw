@@ -1,6 +1,7 @@
 import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/enhanced-button";
 import { Moon, Sun, Monitor } from "lucide-react";
+import coralLogo from "@/assets/coral-logo.svg";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -24,13 +25,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-festive rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">C</span>
-            </div>
-            <span className="text-xl font-bold bg-gradient-festive bg-clip-text text-transparent">
-              Coral Academy
-            </span>
+          <div className="flex items-center">
+            <img 
+              src={coralLogo}
+              alt="Coral Academy" 
+              className="h-8 w-auto"
+              data-testid="nav-logo"
+            />
           </div>
 
           {/* Theme Toggle */}
