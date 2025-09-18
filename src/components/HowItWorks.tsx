@@ -26,18 +26,12 @@ const HowItWorks = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">How It Works</h2>
           <p className="text-lg text-foreground-muted">
             Three simple steps to join the celebration
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (

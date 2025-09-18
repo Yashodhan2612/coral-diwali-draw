@@ -4,22 +4,22 @@ const usps = [
   {
     icon: Users,
     text: 'Live online classes (8–13)',
-    color: 'bg-coral/10 text-coral border-coral/20',
+    color: 'bg-coral/20 text-coral border-coral/30',
   },
   {
     icon: Brain,
     text: 'AI · Money · Debate · Coding',
-    color: 'bg-gold/10 text-gold-foreground border-gold/20',
+    color: 'bg-gold/20 text-gold-foreground border-gold/30',
   },
   {
     icon: Award,
     text: 'Vetted teachers',
-    color: 'bg-pink-glow/10 text-pink-glow border-pink-glow/20',
+    color: 'bg-pink-glow/20 text-pink-glow border-pink-glow/30',
   },
   {
     icon: Heart,
     text: 'Parent-trusted',
-    color: 'bg-accent/10 text-accent border-accent/20',
+    color: 'bg-accent/20 text-accent border-accent/30',
   },
 ];
 
