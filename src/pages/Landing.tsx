@@ -69,8 +69,8 @@ const Landing = () => {
                       <stop offset="100%" stopColor="transparent"/>
                     </radialGradient>
                     <linearGradient id="bowlGrad" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="#4b1d2e"/>
-                      <stop offset="100%" stopColor="#7a2f47"/>
+                      <stop offset="0%" stopColor="#4b2d1d"/>
+                      <stop offset="100%" stopColor="#7a472f"/>
                     </linearGradient>
                     <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="0">
                       <stop offset="0%" stopColor="#ffb86b"/>
@@ -100,7 +100,7 @@ const Landing = () => {
 
                   {/* Bowl */}
                   <g transform="translate(80,160)">
-                    <path d="M70,120 q170,90 340,0 q-40,-40 -60,-82 q-110,36 -220,0 q-20,42 -60,82 z" fill="url(#bowlGrad)" stroke="#a24a66" strokeWidth="1.5"/>
+                    <path d="M70,120 q170,90 340,0 q-40,-40 -60,-82 q-110,36 -220,0 q-20,42 -60,82 z" fill="url(#bowlGrad)" stroke="#a2664a" strokeWidth="1.5"/>
                     {/* Rim highlight */}
                     <path d="M80,120 q160,80 320,0" fill="none" stroke="url(#rimGrad)" strokeWidth="6" opacity="0.8"/>
                     {/* Subtle inner lip */}
