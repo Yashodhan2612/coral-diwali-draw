@@ -10,7 +10,7 @@ const usps = [
   {
     icon: Brain,
     text: 'AI · Financial Literacy · Debate · Coding',
-    color: 'bg-gold/20 dark:bg-gold/30 text-gold-foreground border-gold/30 dark:border-gold/40',
+    color: 'bg-gold-glow/20 dark:bg-gold-glow/30 text-gold-glow-foreground border-gold-glow/30 dark:border-gold-glow/40',
     iconColor: 'text-gold',
   },
   {
