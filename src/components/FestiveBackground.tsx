@@ -1,10 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '@/contexts/ThemeContext';
-import diyaClean from '@/assets/diya-clean.svg';
-import lanternClean from '@/assets/lantern-clean.svg';
-import sparklesClean from '@/assets/sparkles-clean.svg';
-import miniLanterns from '@/assets/mini-lanterns.svg';
+import { Lightbulb, Sparkles, Gift } from 'lucide-react';
 
 interface Particle {
   x: number;
@@ -117,7 +114,7 @@ const FestiveBackground = () => {
         />
       )}
       
-      {/* Floating Diwali Elements - Clean and Subtle */}
+      {/* Floating Diwali Elements - Using Icons */}
       {!prefersReducedMotion && (
         <>
           <motion.div
@@ -132,7 +129,9 @@ const FestiveBackground = () => {
               ease: "easeInOut",
             }}
           >
-            <img src={diyaClean} alt="" className="w-full h-full object-contain" />
+            <div className="w-full h-full flex items-center justify-center">
+              <Lightbulb className="w-8 h-8 text-gold" />
+            </div>
           </motion.div>
           
           <motion.div
@@ -148,7 +147,9 @@ const FestiveBackground = () => {
               delay: 3,
             }}
           >
-            <img src={lanternClean} alt="" className="w-full h-full object-contain" />
+            <div className="w-full h-full flex items-center justify-center">
+              <Sparkles className="w-6 h-6 text-coral" />
+            </div>
           </motion.div>
           
           <motion.div
@@ -164,7 +165,9 @@ const FestiveBackground = () => {
               delay: 6,
             }}
           >
-            <img src={sparklesClean} alt="" className="w-full h-full object-contain" />
+            <div className="w-full h-full flex items-center justify-center">
+              <Gift className="w-10 h-10 text-pink-glow" />
+            </div>
           </motion.div>
           
           <motion.div
@@ -181,10 +184,12 @@ const FestiveBackground = () => {
               delay: 8,
             }}
           >
-            <img src={sparklesClean} alt="" className="w-full h-full object-contain" />
+            <div className="w-full h-full flex items-center justify-center">
+              <Sparkles className="w-4 h-4 text-gold" />
+            </div>
           </motion.div>
 
-          {/* Additional Mini Lanterns for more festive feel */}
+          {/* Additional festive elements */}
           <motion.div
             className={`absolute top-1/3 left-1/2 w-7 h-7 ${theme === 'dark' ? 'opacity-20' : 'opacity-45'}`}
             animate={{
@@ -198,7 +203,9 @@ const FestiveBackground = () => {
               delay: 2,
             }}
           >
-            <img src={miniLanterns} alt="" className="w-full h-full object-contain" />
+            <div className="w-full h-full flex items-center justify-center">
+              <Lightbulb className="w-5 h-5 text-coral" />
+            </div>
           </motion.div>
 
           <motion.div
@@ -214,7 +221,9 @@ const FestiveBackground = () => {
               delay: 5,
             }}
           >
-            <img src={lanternClean} alt="" className="w-full h-full object-contain" />
+            <div className="w-full h-full flex items-center justify-center">
+              <Sparkles className="w-7 h-7 text-pink-glow" />
+            </div>
           </motion.div>
 
           <motion.div
@@ -230,7 +239,9 @@ const FestiveBackground = () => {
               delay: 10,
             }}
           >
-            <img src={miniLanterns} alt="" className="w-full h-full object-contain" />
+            <div className="w-full h-full flex items-center justify-center">
+              <Gift className="w-4 h-4 text-gold" />
+            </div>
           </motion.div>
         </>
       )}
@@ -238,20 +249,20 @@ const FestiveBackground = () => {
       {/* Static elements for reduced motion */}
       {prefersReducedMotion && (
         <div className={`absolute inset-0 ${theme === 'dark' ? 'opacity-25' : 'opacity-45'}`}>
-          <div className="absolute top-20 left-10 w-10 h-10">
-            <img src={diyaClean} alt="" className="w-full h-full object-contain" />
+          <div className="absolute top-20 left-10 w-10 h-10 flex items-center justify-center">
+            <Lightbulb className="w-8 h-8 text-gold" />
           </div>
-          <div className="absolute top-32 right-20 w-8 h-8">
-            <img src={lanternClean} alt="" className="w-full h-full object-contain" />
+          <div className="absolute top-32 right-20 w-8 h-8 flex items-center justify-center">
+            <Sparkles className="w-6 h-6 text-coral" />
           </div>
-          <div className="absolute bottom-40 left-1/4 w-12 h-12">
-            <img src={sparklesClean} alt="" className="w-full h-full object-contain" />
+          <div className="absolute bottom-40 left-1/4 w-12 h-12 flex items-center justify-center">
+            <Gift className="w-10 h-10 text-pink-glow" />
           </div>
-          <div className="absolute top-1/3 left-1/2 w-7 h-7">
-            <img src={miniLanterns} alt="" className="w-full h-full object-contain" />
+          <div className="absolute top-1/3 left-1/2 w-7 h-7 flex items-center justify-center">
+            <Lightbulb className="w-5 h-5 text-coral" />
           </div>
-          <div className="absolute bottom-1/3 right-10 w-9 h-9">
-            <img src={lanternClean} alt="" className="w-full h-full object-contain" />
+          <div className="absolute bottom-1/3 right-10 w-9 h-9 flex items-center justify-center">
+            <Sparkles className="w-7 h-7 text-pink-glow" />
           </div>
         </div>
       )}

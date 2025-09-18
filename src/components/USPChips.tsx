@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Users, Brain, Award, Heart } from 'lucide-react';
 
 const usps = [
@@ -28,28 +27,17 @@ const USPChips = () => {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          className="flex flex-wrap justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="flex flex-wrap justify-center gap-4">
           {usps.map((usp, index) => (
-            <motion.div
+            <div
               key={index}
               className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium transition-all duration-200 hover:scale-105 ${usp.color}`}
-              initial={{ opacity: 1, scale: 1 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
             >
               <usp.icon className="h-4 w-4" />
               <span>{usp.text}</span>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
