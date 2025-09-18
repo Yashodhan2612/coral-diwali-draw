@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
-import BackgroundBlobs from '@/components/BackgroundBlobs';
 import RaffleForm from '@/components/RaffleForm';
 import HowItWorks from '@/components/HowItWorks';
 import USPChips from '@/components/USPChips';
@@ -10,7 +9,7 @@ import Footer from '@/components/Footer';
 const Landing = () => {
   return (
     <div className="min-h-screen relative">
-      <BackgroundBlobs />
+      {/* Background blobs removed */}
       <Navbar />
       
       {/* Hero Section */}

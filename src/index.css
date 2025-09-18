@@ -47,7 +47,10 @@
     /* Gradients */
     --gradient-festive: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--gold)));
     --gradient-glow: linear-gradient(135deg, hsl(var(--pink-glow)), hsl(var(--coral)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(225 30% 94%));
+    /* Subtle radial glow backdrop for light mode */
+    --gradient-hero: radial-gradient(900px 500px at 15% 5%, rgba(246, 196, 83, 0.08), transparent 55%),
+                     radial-gradient(1200px 600px at 85% 10%, rgba(240, 91, 181, 0.04), transparent 60%),
+                     radial-gradient(1000px 600px at 50% -10%, rgba(58, 92, 255, 0.05), transparent 55%);
     
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(var(--gold) / 0.3);
@@ -96,7 +99,10 @@
     /* Enhanced gradients for dark mode */
     --gradient-festive: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--gold)));
     --gradient-glow: linear-gradient(135deg, hsl(var(--pink-glow)), hsl(var(--coral)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(225 88% 10%));
+    /* Subtle radial glow backdrop for dark mode */
+    --gradient-hero: radial-gradient(1000px 600px at 15% 5%, rgba(246, 196, 83, 0.10), transparent 55%),
+                     radial-gradient(1400px 700px at 85% 10%, rgba(240, 91, 181, 0.06), transparent 60%),
+                     radial-gradient(1200px 700px at 50% -10%, rgba(122, 162, 255, 0.07), transparent 55%);
     
     /* Stronger glows in dark mode */
     --shadow-glow: 0 0 60px hsl(var(--gold) / 0.4);
