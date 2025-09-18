@@ -1,24 +1,16 @@
 import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "@/components/ui/enhanced-button";
-import { Moon, Sun, Monitor } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import coralLogo from "@/assets/coral-logo.svg";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    if (theme === 'light') setTheme('dark');
-    else if (theme === 'dark') setTheme('system');
-    else setTheme('light');
+    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
-  const getThemeIcon = () => {
-    switch (theme) {
-      case 'light': return <Sun className="h-4 w-4" />;
-      case 'dark': return <Moon className="h-4 w-4" />;
-      default: return <Monitor className="h-4 w-4" />;
-    }
-  };
+  const getThemeIcon = () => (theme === 'light' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">

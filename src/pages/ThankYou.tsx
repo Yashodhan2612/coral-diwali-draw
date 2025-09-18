@@ -75,7 +75,7 @@ const ThankYou = () => {
                 className="min-w-48"
                 asChild
               >
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.coralacademy.com" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="mr-2 h-5 w-5" />
                   Visit Coral Academy
                 </a>
