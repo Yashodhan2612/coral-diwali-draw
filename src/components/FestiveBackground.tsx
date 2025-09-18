@@ -130,7 +130,7 @@ const FestiveBackground = () => {
             }}
           >
             <div className="w-full h-full flex items-center justify-center">
-              <Lightbulb className="w-8 h-8 text-gold" />
+              <Lightbulb className="w-8 h-8 text-foreground-muted" />
             </div>
           </motion.div>
           
@@ -148,7 +148,7 @@ const FestiveBackground = () => {
             }}
           >
             <div className="w-full h-full flex items-center justify-center">
-              <Sparkles className="w-6 h-6 text-coral" />
+              <Sparkles className="w-6 h-6 text-foreground-muted" />
             </div>
           </motion.div>
           
@@ -166,7 +166,7 @@ const FestiveBackground = () => {
             }}
           >
             <div className="w-full h-full flex items-center justify-center">
-              <Gift className="w-10 h-10 text-pink-glow" />
+              <Gift className="w-10 h-10 text-foreground-muted" />
             </div>
           </motion.div>
           
@@ -185,7 +185,7 @@ const FestiveBackground = () => {
             }}
           >
             <div className="w-full h-full flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-gold" />
+              <Sparkles className="w-4 h-4 text-foreground-muted" />
             </div>
           </motion.div>
 
@@ -204,7 +204,7 @@ const FestiveBackground = () => {
             }}
           >
             <div className="w-full h-full flex items-center justify-center">
-              <Lightbulb className="w-5 h-5 text-coral" />
+              <Lightbulb className="w-5 h-5 text-foreground-muted" />
             </div>
           </motion.div>
 
@@ -222,7 +222,7 @@ const FestiveBackground = () => {
             }}
           >
             <div className="w-full h-full flex items-center justify-center">
-              <Sparkles className="w-7 h-7 text-pink-glow" />
+              <Sparkles className="w-7 h-7 text-foreground-muted" />
             </div>
           </motion.div>
 
@@ -240,7 +240,7 @@ const FestiveBackground = () => {
             }}
           >
             <div className="w-full h-full flex items-center justify-center">
-              <Gift className="w-4 h-4 text-gold" />
+              <Gift className="w-4 h-4 text-foreground-muted" />
             </div>
           </motion.div>
         </>
@@ -248,21 +248,21 @@ const FestiveBackground = () => {
       
       {/* Static elements for reduced motion */}
       {prefersReducedMotion && (
-        <div className={`absolute inset-0 ${theme === 'dark' ? 'opacity-15' : 'opacity-30'}`}>
+        <div className={`absolute inset-0 ${theme === 'dark' ? 'opacity-12' : 'opacity-24'}`}>
           <div className="absolute top-20 left-10 w-10 h-10 flex items-center justify-center">
-            <Lightbulb className="w-8 h-8 text-gold" />
+            <Lightbulb className="w-8 h-8 text-foreground-muted" />
           </div>
           <div className="absolute top-32 right-20 w-8 h-8 flex items-center justify-center">
-            <Sparkles className="w-6 h-6 text-coral" />
+            <Sparkles className="w-6 h-6 text-foreground-muted" />
           </div>
           <div className="absolute bottom-40 left-1/4 w-12 h-12 flex items-center justify-center">
-            <Gift className="w-10 h-10 text-pink-glow" />
+            <Gift className="w-10 h-10 text-foreground-muted" />
           </div>
           <div className="absolute top-1/3 left-1/2 w-7 h-7 flex items-center justify-center">
-            <Lightbulb className="w-5 h-5 text-coral" />
+            <Lightbulb className="w-5 h-5 text-foreground-muted" />
           </div>
           <div className="absolute bottom-1/3 right-10 w-9 h-9 flex items-center justify-center">
-            <Sparkles className="w-7 h-7 text-pink-glow" />
+            <Sparkles className="w-7 h-7 text-foreground-muted" />
           </div>
         </div>
       )}
