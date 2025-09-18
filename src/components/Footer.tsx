@@ -7,11 +7,9 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Logo */}
-          <a href="https://www.coralacademy.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 group">
+          <a href="https://www.coralacademy.com" target="_blank" rel="noopener noreferrer" className="flex items-center group">
             <img src={coralLogo} alt="Coral Academy" className="h-6 w-auto opacity-90 group-hover:opacity-100 transition-opacity" />
-            <span className="text-lg font-bold bg-gradient-festive bg-clip-text text-transparent">
-              Coral Academy
-            </span>
+            <span className="sr-only">Coral Academy</span>
           </a>
 
           {/* Links */}
