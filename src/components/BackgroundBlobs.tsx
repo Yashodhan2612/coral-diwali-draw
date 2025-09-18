@@ -31,7 +31,7 @@ const BackgroundBlobs = () => {
     : BLOBS_SM;
 
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none">
+    <div className="fixed inset-0 z-10 pointer-events-none">
       {blobs.map((b, idx) => (
         <motion.div
           key={idx}
@@ -41,9 +41,9 @@ const BackgroundBlobs = () => {
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: b.delay }}
         >
           <div
-            className="w-full h-full rounded-full blur-3xl"
+            className="w-full h-full rounded-full blur-3xl dark:mix-blend-screen mix-blend-multiply"
             style={{
-              background: 'radial-gradient(closest-side, rgba(255,230,170,0.24), rgba(255,230,170,0.10), rgba(0,0,0,0))'
+              background: 'radial-gradient(closest-side, rgba(255,230,170,0.32), rgba(255,230,170,0.16), rgba(0,0,0,0))'
             }}
           />
         </motion.div>
