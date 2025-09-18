@@ -18,7 +18,26 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        foreground: {
+          DEFAULT: "hsl(var(--foreground))",
+          muted: "hsl(var(--foreground-muted))",
+        },
+        surface: "hsl(var(--surface))",
+        
+        // Diwali festive colors
+        coral: {
+          DEFAULT: "hsl(var(--coral))",
+          foreground: "hsl(var(--coral-foreground))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
+        },
+        "pink-glow": {
+          DEFAULT: "hsl(var(--pink-glow))",
+          foreground: "hsl(var(--pink-glow-foreground))",
+        },
+        
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -47,16 +66,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+      },
+      backgroundImage: {
+        'gradient-festive': 'var(--gradient-festive)',
+        'gradient-glow': 'var(--gradient-glow)',
+        'gradient-hero': 'var(--gradient-hero)',
+      },
+      boxShadow: {
+        'glow': 'var(--shadow-glow)',
+        'coral': 'var(--shadow-coral)',
+        'elegant': 'var(--shadow-elegant)',
       },
       borderRadius: {
         lg: "var(--radius)",
