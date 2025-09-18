@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["class"],
@@ -13,6 +14,23 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Manrope", ...defaultTheme.fontFamily.sans],
+      },
+      height: {
+        fscreen: "var(--fscreen)",
+        dfscreen: "var(--dfscreen)",
+      },
+      spacing: {
+        admin: "var(--admin-offset)",
+      },
+      borderRadius: {
+        lg: "16px",
+        md: "14px",
+        sm: "12px",
+        xs: "10px",
+        xxs: "8px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -77,7 +95,7 @@ export default {
         'coral': 'var(--shadow-coral)',
         'elegant': 'var(--shadow-elegant)',
       },
-      borderRadius: {
+      borderRadiusLegacy: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
@@ -103,6 +121,9 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      gridTemplateColumns: {
+        '16': 'repeat(16, minmax(0, 1fr))',
       },
     },
   },

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/enhanced-button';
 import { ExternalLink, Instagram, Facebook } from 'lucide-react';
-import FestiveBackground from '@/components/FestiveBackground';
+// Background removed per new minimal backdrop
 import Navbar from '@/components/Navbar';
 import { useEffect } from 'react';
 
@@ -16,7 +16,7 @@ const ThankYou = () => {
 
   return (
     <div className="min-h-screen relative">
-      <FestiveBackground />
+      {/* Minimal background only via CSS gradients */}
       <Navbar />
       
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
