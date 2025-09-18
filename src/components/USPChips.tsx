@@ -3,23 +3,23 @@ import { Users, Brain, Award, Heart } from 'lucide-react';
 const usps = [
   {
     icon: Users,
-    text: 'Live online classes (8–13)',
-    color: 'bg-coral/20 text-coral border-coral/30',
+    text: 'Live online classes (Ages 8–13)',
+    color: 'bg-coral/15 dark:bg-coral/25 text-coral border-coral/30 dark:border-coral/40',
   },
   {
     icon: Brain,
-    text: 'AI · Money · Debate · Coding',
-    color: 'bg-gold/20 text-gold-foreground border-gold/30',
+    text: 'AI · Financial Literacy · Debate · Coding',
+    color: 'bg-gold/15 dark:bg-gold/25 text-gold border-gold/30 dark:border-gold/40',
   },
   {
     icon: Award,
     text: 'Vetted teachers',
-    color: 'bg-pink-glow/20 text-pink-glow border-pink-glow/30',
+    color: 'bg-pink-glow/15 dark:bg-pink-glow/25 text-pink-glow border-pink-glow/30 dark:border-pink-glow/40',
   },
   {
     icon: Heart,
-    text: 'Parent-trusted',
-    color: 'bg-accent/20 text-accent border-accent/30',
+    text: 'Trusted By Parents',
+    color: 'bg-accent/15 dark:bg-accent/25 text-accent border-accent/30 dark:border-accent/40',
   },
 ];
 

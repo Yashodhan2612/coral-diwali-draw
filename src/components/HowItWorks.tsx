@@ -44,14 +44,12 @@ const HowItWorks = () => {
               )}
               
               <div className="relative z-10">
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-surface border-2 border-border mb-4 ${step.color}`}>
+                {/* Icon with Step Number overlayed */}
+                <div className={`relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-surface border-2 border-border mb-4 ${step.color}`}>
                   <step.icon className="h-7 w-7" />
-                </div>
-
-                {/* Step Number */}
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-festive text-white text-sm font-bold rounded-full flex items-center justify-center">
-                  {index + 1}
+                  <div className="absolute -top-1.5 -right-1.5 w-7 h-7 bg-gradient-festive text-white text-[12px] font-bold rounded-full flex items-center justify-center shadow-sm ring-2 ring-background">
+                    {index + 1}
+                  </div>
                 </div>
 
                 {/* Content */}
