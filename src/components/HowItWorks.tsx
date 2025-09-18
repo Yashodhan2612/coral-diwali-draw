@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { FileText, CheckCircle, Gamepad2 } from 'lucide-react';
 
 const steps = [
