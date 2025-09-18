@@ -4,7 +4,7 @@ const usps = [
   {
     icon: Users,
     text: 'Live online classes (Ages 8–13)',
-    color: 'bg-coral/20 dark:bg-coral/30 text-coral-foreground border-coral/30 dark:border-coral/40',
+    color: 'bg-gold-glow/20 dark:bg-gold-glow/30 text-gold-glow-foreground border-gold-glow/30 dark:border-gold-glow/40',
     iconColor: 'text-coral',
   },
   {
@@ -16,13 +16,13 @@ const usps = [
   {
     icon: Award,
     text: 'Vetted teachers',
-    color: 'bg-pink-glow/20 dark:bg-pink-glow/30 text-pink-glow-foreground border-pink-glow/30 dark:border-pink-glow/40',
+    color: 'bg-gold-glow/20 dark:bg-gold-glow/30 text-gold-glow-foreground border-gold-glow/30 dark:border-gold-glow/40',
     iconColor: 'text-pink-glow',
   },
   {
     icon: Heart,
     text: 'Trusted By Parents',
-    color: 'bg-accent/20 dark:bg-accent/30 text-accent-foreground border-accent/30 dark:border-accent/40',
+    color: 'bg-gold-glow/20 dark:bg-gold-glow/30 text-gold-glow-foreground border-gold-glow/30 dark:border-gold-glow/40',
     iconColor: 'text-accent',
   },
 ];
