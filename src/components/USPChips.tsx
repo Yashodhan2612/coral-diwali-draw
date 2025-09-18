@@ -4,22 +4,22 @@ const usps = [
   {
     icon: Users,
     text: 'Live online classes (Ages 8–13)',
-    color: 'bg-coral/15 dark:bg-coral/25 text-coral border-coral/30 dark:border-coral/40',
+    color: 'bg-coral/15 dark:bg-coral/25 text-coral-foreground border-coral/30 dark:border-coral/40',
   },
   {
     icon: Brain,
     text: 'AI · Financial Literacy · Debate · Coding',
-    color: 'bg-gold/15 dark:bg-gold/25 text-gold border-gold/30 dark:border-gold/40',
+    color: 'bg-gold/15 dark:bg-gold/25 text-gold-foreground border-gold/30 dark:border-gold/40',
   },
   {
     icon: Award,
     text: 'Vetted teachers',
-    color: 'bg-pink-glow/15 dark:bg-pink-glow/25 text-pink-glow border-pink-glow/30 dark:border-pink-glow/40',
+    color: 'bg-pink-glow/15 dark:bg-pink-glow/25 text-pink-glow-foreground border-pink-glow/30 dark:border-pink-glow/40',
   },
   {
     icon: Heart,
     text: 'Trusted By Parents',
-    color: 'bg-accent/15 dark:bg-accent/25 text-accent border-accent/30 dark:border-accent/40',
+    color: 'bg-accent/15 dark:bg-accent/25 text-accent-foreground border-accent/30 dark:border-accent/40',
   },
 ];
 
@@ -31,7 +31,7 @@ const USPChips = () => {
           {usps.map((usp, index) => (
             <div
               key={index}
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium transition-all duration-200 hover:scale-105 opacity-100 ${usp.color}`}
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border ring-1 ring-border/50 dark:ring-border/60 text-sm font-medium transition-all duration-200 hover:scale-105 opacity-100 ${usp.color}`}
               style={{ opacity: 1, transform: 'scale(1)' }}
             >
               <usp.icon className="h-4 w-4" />
