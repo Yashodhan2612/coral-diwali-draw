@@ -125,7 +125,7 @@ const RaffleForm = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="card-festive p-6 backdrop-blur-sm">
+        <div className="card-festive p-6 backdrop-blur-md border-2 bg-card/95">
           <div className="mb-6 text-center">
             <h2 className="text-2xl font-bold mb-2 flex items-center justify-center gap-2">
               <Sparkles className="h-6 w-6 text-gold" />

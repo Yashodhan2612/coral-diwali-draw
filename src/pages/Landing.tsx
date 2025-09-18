@@ -6,7 +6,7 @@ import HowItWorks from '@/components/HowItWorks';
 import USPChips from '@/components/USPChips';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
-import vrHeadset from '@/assets/vr-headset.png';
+import vrClean from '@/assets/vr-clean.svg';
 
 const Landing = () => {
   return (
@@ -51,11 +51,11 @@ const Landing = () => {
               >
                 <div className="relative">
                   <img 
-                    src={vrHeadset} 
+                    src={vrClean} 
                     alt="VR Experience" 
-                    className="w-24 h-24 object-contain animate-float"
+                    className="w-20 h-20 object-contain animate-float"
                   />
-                  <div className="absolute -inset-4 bg-gradient-glow rounded-full opacity-20 blur-xl animate-glow" />
+                  <div className="absolute -inset-3 bg-gradient-glow rounded-full opacity-15 blur-lg animate-glow" />
                 </div>
               </motion.div>
             </motion.div>

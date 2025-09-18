@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import diwaliElements from '@/assets/diwali-elements.png';
+import { useTheme } from '@/contexts/ThemeContext';
+import diyaClean from '@/assets/diya-clean.svg';
+import lanternClean from '@/assets/lantern-clean.svg';
+import sparklesClean from '@/assets/sparkles-clean.svg';
 
 interface Particle {
   x: number;
@@ -13,6 +16,7 @@ interface Particle {
 }
 
 const FestiveBackground = () => {
+  const { theme } = useTheme();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
   const particlesRef = useRef<Particle[]>([]);
@@ -44,15 +48,18 @@ const FestiveBackground = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Initialize particles
-    const colors = ['#F6C453', '#FF6B6B', '#F05BB5'];
-    particlesRef.current = Array.from({ length: 30 }, () => ({
+    // Initialize particles with theme-aware colors and reduced count
+    const colors = theme === 'dark' 
+      ? ['#F6C453', '#FF6B6B', '#F05BB5'] 
+      : ['#E5A835', '#E55555', '#D64A9A']; // Darker variants for light mode
+    
+    particlesRef.current = Array.from({ length: 20 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      opacity: Math.random() * 0.5 + 0.1,
-      size: Math.random() * 3 + 1,
+      vx: (Math.random() - 0.5) * 0.3, // Reduced speed
+      vy: (Math.random() - 0.5) * 0.3,
+      opacity: theme === 'dark' ? Math.random() * 0.4 + 0.1 : Math.random() * 0.6 + 0.2, // Higher opacity for light mode
+      size: Math.random() * 2 + 1, // Smaller particles
       color: colors[Math.floor(Math.random() * colors.length)],
     }));
 
@@ -70,12 +77,12 @@ const FestiveBackground = () => {
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
 
-        // Draw particle with glow
+        // Draw particle with subtle glow
         ctx.save();
         ctx.globalAlpha = particle.opacity;
         ctx.fillStyle = particle.color;
         ctx.shadowColor = particle.color;
-        ctx.shadowBlur = 10;
+        ctx.shadowBlur = theme === 'dark' ? 8 : 6; // Reduced glow
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
@@ -93,7 +100,7 @@ const FestiveBackground = () => {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [prefersReducedMotion]);
+  }, [prefersReducedMotion, theme]);
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -104,74 +111,91 @@ const FestiveBackground = () => {
       {!prefersReducedMotion && (
         <canvas
           ref={canvasRef}
-          className="absolute inset-0 opacity-60"
-          style={{ mixBlendMode: 'screen' }}
+          className={`absolute inset-0 ${theme === 'dark' ? 'opacity-50' : 'opacity-40'}`}
+          style={{ mixBlendMode: theme === 'dark' ? 'screen' : 'multiply' }}
         />
       )}
       
-      {/* Floating Diwali Elements */}
+      {/* Floating Diwali Elements - Clean and Subtle */}
       {!prefersReducedMotion && (
         <>
           <motion.div
-            className="absolute top-20 left-10 w-12 h-12 opacity-20"
+            className={`absolute top-20 left-10 w-10 h-10 ${theme === 'dark' ? 'opacity-30' : 'opacity-60'}`}
             animate={{
-              y: [0, -20, 0],
-              rotate: [0, 5, -5, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <img src={diwaliElements} alt="" className="w-full h-full object-contain" />
-          </motion.div>
-          
-          <motion.div
-            className="absolute top-32 right-20 w-8 h-8 opacity-30"
-            animate={{
-              y: [0, -15, 0],
-              x: [0, 10, 0],
+              y: [0, -8, 0],
+              rotate: [0, 3, -3, 0],
             }}
             transition={{
               duration: 8,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: 2,
             }}
           >
-            <img src={diwaliElements} alt="" className="w-full h-full object-contain" />
+            <img src={diyaClean} alt="" className="w-full h-full object-contain" />
           </motion.div>
           
           <motion.div
-            className="absolute bottom-40 left-1/4 w-10 h-10 opacity-25"
+            className={`absolute top-32 right-20 w-8 h-8 ${theme === 'dark' ? 'opacity-25' : 'opacity-50'}`}
             animate={{
-              y: [0, -25, 0],
-              rotate: [0, -10, 10, 0],
+              y: [0, -6, 0],
+              x: [0, 4, 0],
             }}
             transition={{
               duration: 10,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: 4,
+              delay: 3,
             }}
           >
-            <img src={diwaliElements} alt="" className="w-full h-full object-contain" />
+            <img src={lanternClean} alt="" className="w-full h-full object-contain" />
+          </motion.div>
+          
+          <motion.div
+            className={`absolute bottom-40 left-1/4 w-12 h-12 ${theme === 'dark' ? 'opacity-20' : 'opacity-40'}`}
+            animate={{
+              y: [0, -10, 0],
+              rotate: [0, -5, 5, 0],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 6,
+            }}
+          >
+            <img src={sparklesClean} alt="" className="w-full h-full object-contain" />
+          </motion.div>
+          
+          <motion.div
+            className={`absolute top-1/2 right-1/3 w-6 h-6 ${theme === 'dark' ? 'opacity-15' : 'opacity-35'}`}
+            animate={{
+              y: [0, -12, 0],
+              x: [0, 6, 0],
+              rotate: [0, 180, 360],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 8,
+            }}
+          >
+            <img src={sparklesClean} alt="" className="w-full h-full object-contain" />
           </motion.div>
         </>
       )}
       
       {/* Static elements for reduced motion */}
       {prefersReducedMotion && (
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-12 h-12">
-            <img src={diwaliElements} alt="" className="w-full h-full object-contain" />
+        <div className={`absolute inset-0 ${theme === 'dark' ? 'opacity-25' : 'opacity-45'}`}>
+          <div className="absolute top-20 left-10 w-10 h-10">
+            <img src={diyaClean} alt="" className="w-full h-full object-contain" />
           </div>
           <div className="absolute top-32 right-20 w-8 h-8">
-            <img src={diwaliElements} alt="" className="w-full h-full object-contain" />
+            <img src={lanternClean} alt="" className="w-full h-full object-contain" />
           </div>
-          <div className="absolute bottom-40 left-1/4 w-10 h-10">
-            <img src={diwaliElements} alt="" className="w-full h-full object-contain" />
+          <div className="absolute bottom-40 left-1/4 w-12 h-12">
+            <img src={sparklesClean} alt="" className="w-full h-full object-contain" />
           </div>
         </div>
       )}

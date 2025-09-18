@@ -8,8 +8,8 @@
 
 @layer base {
   :root {
-    /* Light Mode - Clean and Bright */
-    --background: 225 100% 99.4%; /* #FAFBFF */
+    /* Light Mode - Clean and Bright with better contrast */
+    --background: 225 50% 97%; /* Softer cream background */
     --surface: 0 0% 100%; /* #FFFFFF */
     --foreground: 225 47% 15%; /* #0D1328 */
     --foreground-muted: 225 30% 35%; /* #3B4361 */
@@ -47,7 +47,7 @@
     /* Gradients */
     --gradient-festive: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--gold)));
     --gradient-glow: linear-gradient(135deg, hsl(var(--pink-glow)), hsl(var(--coral)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(225 100% 97%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(225 30% 94%));
     
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(var(--gold) / 0.3);
