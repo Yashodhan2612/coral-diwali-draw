@@ -6,7 +6,7 @@ import HowItWorks from '@/components/HowItWorks';
 import USPChips from '@/components/USPChips';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
-import vrClean from '@/assets/vr-clean.svg';
+import contestPrize from '@/assets/contest-prize.svg';
 
 const Landing = () => {
   return (
@@ -32,17 +32,17 @@ const Landing = () => {
                 </span>{' '}
                 with Coral —{' '}
                 <span className="bg-gradient-glow bg-clip-text text-transparent">
-                  Enter the Raffle
+                  Win Amazing Prizes
                 </span>{' '}
                 + Enjoy VR Fun
               </h1>
               
               <p className="text-sub-hero text-foreground-muted mb-8">
                 Fill the form to join the raffle and get special VR access at the event. 
-                Experience immersive learning while celebrating the festival of lights!
+                Experience immersive learning while celebrating the festival of lights and win exciting prizes!
               </p>
 
-              {/* VR Headset Illustration */}
+              {/* Contest Prize Illustration */}
               <motion.div
                 className="flex justify-center lg:justify-start mb-8"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -51,8 +51,8 @@ const Landing = () => {
               >
                 <div className="relative">
                   <img 
-                    src={vrClean} 
-                    alt="VR Experience" 
+                    src={contestPrize} 
+                    alt="Contest Prizes and VR Experience" 
                     className="w-20 h-20 object-contain animate-float"
                   />
                   <div className="absolute -inset-3 bg-gradient-glow rounded-full opacity-15 blur-lg animate-glow" />
