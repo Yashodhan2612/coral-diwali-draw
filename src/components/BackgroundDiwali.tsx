@@ -15,7 +15,7 @@ const BackgroundDiwali = () => {
 
   // Dev-only visibility check for headings to ensure backgrounds never obscure content
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') return;
+    if (import.meta.env.PROD) return;
     const ids = ['howitworks-heading', 'faq-heading'];
     const observer = new IntersectionObserver(
       (entries) => {
