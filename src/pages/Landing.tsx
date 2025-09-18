@@ -48,130 +48,81 @@ const Landing = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-            >
+              >
               <figure 
                 data-testid="hero-vr-image" 
                 className="relative select-none pointer-events-none w-full max-w-[320px] lg:max-w-[440px] animate-float"
               >
-                {/* Inline VR SVG */}
+                {/* Inline Diya SVG */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 720 420"
+                  viewBox="0 0 640 420"
                   role="img"
-                  aria-labelledby="title desc"
+                  aria-labelledby="diyaTitle diyaDesc"
                   className="w-full h-auto"
                 >
-                  <title id="title">Stylized VR Headset</title>
-                  <desc id="desc">A clean, modern VR headset with soft lens glow and subtle festive sparkles.</desc>
-
-                  <style>
-                    {`:root {
-                      --vr-bg: none;
-                      --vr-body: #0f152e;
-                      --vr-body-2: #1a2142;
-                      --vr-stroke: rgba(255,255,255,0.08);
-                      --vr-edge: rgba(255,255,255,0.18);
-                      --vr-lens-ring: #2c5cff;
-                      --vr-lens-glow: #7aa2ff;
-                      --vr-accent: #ff6b6b;
-                      --sparkle: #f6c453;
-                      --shadow: rgba(12,16,36,0.45);
-                    }
-                    @media (prefers-color-scheme: light) {
-                      :root {
-                        --vr-body: #ffffff;
-                        --vr-body-2: #f5f7ff;
-                        --vr-stroke: rgba(13,19,40,0.08);
-                        --vr-edge: rgba(13,19,40,0.14);
-                        --vr-lens-ring: #3a5cff;
-                        --vr-lens-glow: #7a9bff;
-                        --shadow: rgba(13,19,40,0.18);
-                      }
-                    }`}
-                  </style>
+                  <title id="diyaTitle">Festive Diwali Diya</title>
+                  <desc id="diyaDesc">A warm, elegant diya lamp with soft glow and subtle sparkles.</desc>
 
                   <defs>
-                    <radialGradient id="gShadow" cx="50%" cy="60%" r="55%">
-                      <stop offset="0%" stopColor="var(--shadow)" />
-                      <stop offset="100%" stopColor="transparent" />
+                    <radialGradient id="plateShadow" cx="50%" cy="60%" r="55%">
+                      <stop offset="0%" stopColor="rgba(12,16,36,0.35)"/>
+                      <stop offset="100%" stopColor="transparent"/>
                     </radialGradient>
-
-                    <linearGradient id="gBody" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="var(--vr-body-2)"/>
-                      <stop offset="100%" stopColor="var(--vr-body)"/>
+                    <linearGradient id="bowlGrad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="#4b1d2e"/>
+                      <stop offset="100%" stopColor="#7a2f47"/>
                     </linearGradient>
-
-                    <radialGradient id="gLensGlow" cx="50%" cy="50%" r="60%">
-                      <stop offset="0%" stopColor="var(--vr-lens-glow)" stopOpacity="0.95"/>
-                      <stop offset="45%" stopColor="var(--vr-lens-glow)" stopOpacity="0.35"/>
-                      <stop offset="100%" stopColor="transparent"/>
-                    </radialGradient>
-
-                    <radialGradient id="gSpark" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="var(--sparkle)" stopOpacity="0.9"/>
-                      <stop offset="100%" stopColor="transparent"/>
-                    </radialGradient>
-
-                    <linearGradient id="gTopHL" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="rgba(255,255,255,0.55)"/>
-                      <stop offset="100%" stopColor="transparent"/>
+                    <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stopColor="#ffb86b"/>
+                      <stop offset="100%" stopColor="#ffd89c"/>
                     </linearGradient>
+                    <radialGradient id="flameGrad" cx="50%" cy="40%" r="60%">
+                      <stop offset="0%" stopColor="#fff4c2"/>
+                      <stop offset="35%" stopColor="#ffd27d"/>
+                      <stop offset="80%" stopColor="#ff8a3a"/>
+                      <stop offset="100%" stopColor="transparent"/>
+                    </radialGradient>
+                    <radialGradient id="innerFlame" cx="50%" cy="40%" r="50%">
+                      <stop offset="0%" stopColor="#ffffff"/>
+                      <stop offset="100%" stopColor="#fff1b8"/>
+                    </radialGradient>
+                    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+                      <stop offset="0%" stopColor="rgba(255,196,85,0.35)"/>
+                      <stop offset="100%" stopColor="transparent"/>
+                    </radialGradient>
                   </defs>
 
-                  <ellipse cx="360" cy="342" rx="220" ry="42" fill="url(#gShadow)"/>
+                  {/* Soft base shadow */}
+                  <ellipse cx="320" cy="360" rx="210" ry="40" fill="url(#plateShadow)"/>
 
-                  <g transform="translate(90,80)">
-                    <path
-                      d="M70,70 h400 a46,46 0 0 1 46,46 v62 a46,46 0 0 1 -46,46 h-400 a46,46 0 0 1 -46,-46 v-62 a46,46 0 0 1 46,-46 z"
-                      fill="url(#gBody)"
-                      stroke="var(--vr-edge)" strokeWidth="1.5"
-                    />
+                  {/* Back glow */}
+                  <circle cx="320" cy="210" r="160" fill="url(#glow)" />
 
-                    <path
-                      d="M258,178 q22,14 44,0"
-                      fill="none" stroke="var(--vr-stroke)" strokeWidth="8" strokeLinecap="round"
-                    />
-
-                    <path d="M24,122 q-22,18 -34,42 q20,18 42,24" fill="none" stroke="var(--vr-edge)" strokeWidth="10" strokeLinecap="round"/>
-                    <path d="M516,122 q22,18 34,42 q-20,18 -42,24" fill="none" stroke="var(--vr-edge)" strokeWidth="10" strokeLinecap="round"/>
-
-                    <g id="lenses">
-                      <circle cx="172" cy="147" r="64" fill="#0b0f24" />
-                      <circle cx="172" cy="147" r="58" fill="none" stroke="var(--vr-lens-ring)" strokeWidth="3"/>
-                      <circle cx="368" cy="147" r="64" fill="#0b0f24" />
-                      <circle cx="368" cy="147" r="58" fill="none" stroke="var(--vr-lens-ring)" strokeWidth="3"/>
-
-                      <circle cx="172" cy="147" r="64" fill="url(#gLensGlow)"/>
-                      <circle cx="368" cy="147" r="64" fill="url(#gLensGlow)"/>
-
-                      <ellipse cx="152" cy="128" rx="18" ry="10" fill="white" opacity="0.25"/>
-                      <ellipse cx="350" cy="128" rx="18" ry="10" fill="white" opacity="0.25"/>
-                    </g>
-
-                    <path
-                      d="M70,70 h400 a46,46 0 0 1 46,46 v4 h-492 v-4 a46,46 0 0 1 46,-46 z"
-                      fill="url(#gTopHL)" opacity="0.35"
-                    />
-
-                    <g opacity="0.5" stroke="var(--vr-accent)" strokeLinecap="round">
-                      <line x1="118" y1="94" x2="130" y2="94" strokeWidth="3"/>
-                      <line x1="440" y1="94" x2="452" y2="94" strokeWidth="3"/>
-                      <line x1="118" y1="200" x2="130" y2="200" strokeWidth="3"/>
-                      <line x1="440" y1="200" x2="452" y2="200" strokeWidth="3"/>
-                    </g>
+                  {/* Bowl */}
+                  <g transform="translate(80,160)">
+                    <path d="M70,120 q170,90 340,0 q-40,-40 -60,-82 q-110,36 -220,0 q-20,42 -60,82 z" fill="url(#bowlGrad)" stroke="#a24a66" strokeWidth="1.5"/>
+                    {/* Rim highlight */}
+                    <path d="M80,120 q160,80 320,0" fill="none" stroke="url(#rimGrad)" strokeWidth="6" opacity="0.8"/>
+                    {/* Subtle inner lip */}
+                    <path d="M98,110 q140,70 284,0" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="2"/>
                   </g>
 
-                  <g opacity="0.55">
-                    <circle cx="112" cy="96" r="4" fill="url(#gSpark)"/>
-                    <circle cx="610" cy="110" r="5" fill="url(#gSpark)"/>
-                    <circle cx="530" cy="56" r="3" fill="url(#gSpark)"/>
-                    <circle cx="140" cy="330" r="4" fill="url(#gSpark)"/>
-                    <circle cx="604" cy="300" r="4" fill="url(#gSpark)"/>
+                  {/* Wick base */}
+                  <ellipse cx="320" cy="190" rx="18" ry="6" fill="#3f1f1f" opacity="0.9"/>
+
+                  {/* Flame */}
+                  <g>
+                    <path d="M320,85 q38,48 0,96 q-38,-48 0,-96 z" fill="url(#innerFlame)"/>
+                    <path d="M320,100 q30,40 0,80 q-30,-40 0,-80 z" fill="url(#flameGrad)"/>
                   </g>
 
-                  <g opacity="0.25">
-                    <circle cx="262" cy="170" r="22" fill="var(--vr-accent)"/>
-                    <circle cx="458" cy="168" r="18" fill="var(--vr-lens-glow)"/>
+                  {/* Sparkles */}
+                  <g opacity="0.35">
+                    <circle cx="220" cy="120" r="3" fill="#f6c453"/>
+                    <circle cx="420" cy="110" r="3.5" fill="#f6c453"/>
+                    <circle cx="450" cy="160" r="2.5" fill="#f6c453"/>
+                    <circle cx="200" cy="180" r="2.5" fill="#f6c453"/>
                   </g>
                 </svg>
                 
