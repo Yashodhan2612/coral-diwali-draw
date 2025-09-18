@@ -56,7 +56,7 @@ const FestiveBackground = () => {
       y: Math.random() * canvas.height,
       vx: (Math.random() - 0.5) * 0.3, // Reduced speed
       vy: (Math.random() - 0.5) * 0.3,
-      opacity: theme === 'dark' ? Math.random() * 0.4 + 0.1 : Math.random() * 0.6 + 0.2, // Higher opacity for light mode
+      opacity: theme === 'dark' ? Math.random() * 0.25 + 0.05 : Math.random() * 0.35 + 0.1, // Softer overall
       size: Math.random() * 2 + 1, // Smaller particles
       color: colors[Math.floor(Math.random() * colors.length)],
     }));
@@ -80,7 +80,7 @@ const FestiveBackground = () => {
         ctx.globalAlpha = particle.opacity;
         ctx.fillStyle = particle.color;
         ctx.shadowColor = particle.color;
-        ctx.shadowBlur = theme === 'dark' ? 8 : 6; // Reduced glow
+        ctx.shadowBlur = theme === 'dark' ? 6 : 4; // Softer glow
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
@@ -109,7 +109,7 @@ const FestiveBackground = () => {
       {!prefersReducedMotion && (
         <canvas
           ref={canvasRef}
-          className={`absolute inset-0 ${theme === 'dark' ? 'opacity-50' : 'opacity-40'}`}
+          className={`absolute inset-0 ${theme === 'dark' ? 'opacity-35' : 'opacity-30'}`}
           style={{ mixBlendMode: theme === 'dark' ? 'screen' : 'multiply' }}
         />
       )}
@@ -118,7 +118,7 @@ const FestiveBackground = () => {
       {!prefersReducedMotion && (
         <>
           <motion.div
-            className={`absolute top-20 left-10 w-10 h-10 ${theme === 'dark' ? 'opacity-30' : 'opacity-60'}`}
+            className={`absolute top-20 left-10 w-10 h-10 ${theme === 'dark' ? 'opacity-20' : 'opacity-40'}`}
             animate={{
               y: [0, -8, 0],
               rotate: [0, 3, -3, 0],
@@ -135,7 +135,7 @@ const FestiveBackground = () => {
           </motion.div>
           
           <motion.div
-            className={`absolute top-32 right-20 w-8 h-8 ${theme === 'dark' ? 'opacity-25' : 'opacity-50'}`}
+            className={`absolute top-32 right-20 w-8 h-8 ${theme === 'dark' ? 'opacity-15' : 'opacity-35'}`}
             animate={{
               y: [0, -6, 0],
               x: [0, 4, 0],
@@ -153,7 +153,7 @@ const FestiveBackground = () => {
           </motion.div>
           
           <motion.div
-            className={`absolute bottom-40 left-1/4 w-12 h-12 ${theme === 'dark' ? 'opacity-20' : 'opacity-40'}`}
+            className={`absolute bottom-40 left-1/4 w-12 h-12 ${theme === 'dark' ? 'opacity-12' : 'opacity-30'}`}
             animate={{
               y: [0, -10, 0],
               rotate: [0, -5, 5, 0],
@@ -171,7 +171,7 @@ const FestiveBackground = () => {
           </motion.div>
           
           <motion.div
-            className={`absolute top-1/2 right-1/3 w-6 h-6 ${theme === 'dark' ? 'opacity-15' : 'opacity-35'}`}
+            className={`absolute top-1/2 right-1/3 w-6 h-6 ${theme === 'dark' ? 'opacity-10' : 'opacity-25'}`}
             animate={{
               y: [0, -12, 0],
               x: [0, 6, 0],
@@ -191,7 +191,7 @@ const FestiveBackground = () => {
 
           {/* Additional festive elements */}
           <motion.div
-            className={`absolute top-1/3 left-1/2 w-7 h-7 ${theme === 'dark' ? 'opacity-20' : 'opacity-45'}`}
+            className={`absolute top-1/3 left-1/2 w-7 h-7 ${theme === 'dark' ? 'opacity-12' : 'opacity-28'}`}
             animate={{
               y: [0, -8, 0],
               x: [0, -5, 0],
@@ -209,7 +209,7 @@ const FestiveBackground = () => {
           </motion.div>
 
           <motion.div
-            className={`absolute bottom-1/3 right-10 w-9 h-9 ${theme === 'dark' ? 'opacity-18' : 'opacity-38'}`}
+            className={`absolute bottom-1/3 right-10 w-9 h-9 ${theme === 'dark' ? 'opacity-10' : 'opacity-24'}`}
             animate={{
               y: [0, -7, 0],
               rotate: [0, 2, -2, 0],
@@ -227,7 +227,7 @@ const FestiveBackground = () => {
           </motion.div>
 
           <motion.div
-            className={`absolute top-3/4 left-1/6 w-5 h-5 ${theme === 'dark' ? 'opacity-12' : 'opacity-30'}`}
+            className={`absolute top-3/4 left-1/6 w-5 h-5 ${theme === 'dark' ? 'opacity-8' : 'opacity-20'}`}
             animate={{
               y: [0, -15, 0],
               x: [0, 8, 0],
@@ -248,7 +248,7 @@ const FestiveBackground = () => {
       
       {/* Static elements for reduced motion */}
       {prefersReducedMotion && (
-        <div className={`absolute inset-0 ${theme === 'dark' ? 'opacity-25' : 'opacity-45'}`}>
+        <div className={`absolute inset-0 ${theme === 'dark' ? 'opacity-15' : 'opacity-30'}`}>
           <div className="absolute top-20 left-10 w-10 h-10 flex items-center justify-center">
             <Lightbulb className="w-8 h-8 text-gold" />
           </div>
