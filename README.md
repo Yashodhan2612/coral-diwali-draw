@@ -62,7 +62,17 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/91bcaaca-f6ea-49a9-86f6-6b52d8b438d3) and click on Share -> Publish.
+Option 1: Vercel (requires access to your GitHub org/team).
+
+Option 2: GitHub Pages (no Vercel access needed):
+
+1. Ensure the repo has Actions enabled.
+2. Push to `main`. A workflow at `.github/workflows/deploy.yml` will build and publish.
+3. In GitHub → Settings → Pages:
+   - Source: “GitHub Actions”.
+4. Your site will be available at `https://<user>.github.io/<repo>/`.
+
+The workflow sets the base path automatically and adds a SPA fallback (`404.html`).
 
 ## Can I connect a custom domain to my Lovable project?
 
