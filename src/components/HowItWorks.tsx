@@ -27,7 +27,7 @@ const HowItWorks = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-3xl font-bold mb-4" data-testid="howitworks-heading">How It Works</h2>
           <p className="text-lg text-foreground-muted">
             Three simple steps to join the celebration
           </p>
@@ -35,13 +35,9 @@ const HowItWorks = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <motion.div
+            <div
               key={index}
               className="text-center relative"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               {/* Connector Line */}
               {index < steps.length - 1 && (
@@ -63,7 +59,7 @@ const HowItWorks = () => {
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-foreground-muted">{step.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

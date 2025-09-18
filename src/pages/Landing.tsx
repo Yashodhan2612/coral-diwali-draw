@@ -6,7 +6,8 @@ import HowItWorks from '@/components/HowItWorks';
 import USPChips from '@/components/USPChips';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
-import contestPrize from '@/assets/contest-prize.svg';
+import vrHero from '@/assets/vr-headset.png';
+import vrFallback from '@/assets/vr-clean.svg';
 
 const Landing = () => {
   return (
@@ -42,22 +43,23 @@ const Landing = () => {
                 Experience immersive learning while celebrating the festival of lights and win exciting prizes!
               </p>
 
-              {/* Contest Prize Illustration */}
-              <motion.div
-                className="flex justify-center lg:justify-start mb-8"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
+              {/* VR Hero Illustration */}
+              <div className="flex justify-center lg:justify-start mb-8">
                 <div className="relative">
                   <img 
-                    src={contestPrize} 
-                    alt="Contest Prizes and VR Experience" 
-                    className="w-20 h-20 object-contain animate-float"
+                    src={vrHero}
+                    alt="VR headset illustration"
+                    width={280}
+                    height={210}
+                    loading="eager"
+                    decoding="async"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = vrFallback; }}
+                    className="w-[280px] h-[210px] object-contain animate-float select-none pointer-events-none"
+                    data-testid="hero-vr-image"
                   />
                   <div className="absolute -inset-3 bg-gradient-glow rounded-full opacity-15 blur-lg animate-glow" />
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
 
             {/* Form Card */}
