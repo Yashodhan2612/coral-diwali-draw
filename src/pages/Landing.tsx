@@ -51,7 +51,7 @@ const Landing = () => {
             >
               <figure 
                 data-testid="hero-vr-image" 
-                className="relative select-none pointer-events-none w-full max-w-[420px] lg:max-w-[560px] animate-float"
+                className="relative select-none pointer-events-none w-full max-w-[320px] lg:max-w-[440px] animate-float"
               >
                 {/* Inline VR SVG */}
                 <svg
@@ -175,7 +175,7 @@ const Landing = () => {
                   </g>
                 </svg>
                 
-                <div className="absolute -inset-3 bg-gradient-glow rounded-full opacity-15 blur-lg animate-glow" />
+                <div className="absolute -inset-3 -z-10 bg-gradient-glow rounded-full opacity-10 blur-md animate-glow" />
               </figure>
             </motion.div>
 
