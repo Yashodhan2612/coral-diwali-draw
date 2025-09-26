@@ -58,7 +58,7 @@ const NewThankYou = () => {
                 transition={{ duration: 0.5, delay: 0.2, type: "spring", bounce: 0.4 }}
               >
                 {/* FL Class Banner - 320x50 style for mobile */}
-                <div className="w-full h-12 sm:h-16 rounded-lg overflow-hidden bg-gradient-to-r from-primary/20 via-pink-glow/20 to-pink-glow/20 flex items-center justify-center border-2 border-primary/20">
+                <div className="w-full h-12 sm:h-16 rounded-lg overflow-hidden bg-primary/10 flex items-center justify-center border-2 border-primary/20">
                   <div className="text-center">
                     <div className="flex items-center gap-2 text-sm sm:text-base font-semibold text-primary">
                       <span>🏦💡</span>
@@ -72,9 +72,7 @@ const NewThankYou = () => {
                 <p className="text-lg font-semibold text-primary mb-2">Coral Academy's</p>
                 <h1 className="text-hero mb-6">
                   Financial Literacy for Kids{' '}
-                  <span className="bg-gradient-to-r from-primary via-pink-glow to-pink-glow bg-clip-text text-transparent">
-                    (8–13)
-                  </span>
+                  <span className="text-primary">(8–13)</span>
                 </h1>
               </div>
             </div>
@@ -93,8 +91,8 @@ const NewThankYou = () => {
                     key={index}
                     className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border ring-1 ring-border/50 text-sm font-medium transition-all duration-200 hover:scale-105 ${usp.color}`}
                   >
-                    <usp.icon className={`h-5 w-5 ${usp.iconColor} drop-shadow-[0_0_6px_currentColor]`} />
-                    <span className="[text-shadow:0_0_1px_rgba(0,0,0,0.12)] dark:[text-shadow:0_0_1px_rgba(255,255,255,0.06)]">{usp.text}</span>
+                    <usp.icon className={`h-5 w-5 ${usp.iconColor}`} />
+                    <span>{usp.text}</span>
                   </div>
                 ))}
               </div>
@@ -108,7 +106,7 @@ const NewThankYou = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               data-testid="thankyou-fl-waitlist"
             >
-              <div className="flex items-center justify-center gap-3 p-6 bg-gradient-to-r from-primary/5 via-pink-glow/5 to-pink-glow/5 border border-primary/20 rounded-xl max-w-md mx-auto">
+              <div className="flex items-center justify-center gap-3 p-6 bg-primary/5 border border-primary/20 rounded-xl max-w-md mx-auto">
                 <Checkbox
                   id="waitlist"
                   checked={waitlistChecked}
@@ -128,7 +126,7 @@ const NewThankYou = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <div className="bg-gradient-to-r from-primary/10 via-pink-glow/10 to-pink-glow/10 border border-primary/20 rounded-xl p-8 max-w-2xl mx-auto">
+              <div className="bg-primary/10 border border-primary/20 rounded-xl p-8 max-w-2xl mx-auto">
                 <div className="text-4xl mb-4">🙏</div>
                 <h2 className="text-2xl font-bold mb-4 text-primary">Thanks for confirming!</h2>
                 <p className="text-foreground-muted">
@@ -148,7 +146,7 @@ const NewThankYou = () => {
               {/* Primary CTA */}
               <div className="mb-8">
                 <Button
-                  variant="festive"
+                  variant="default"
                   size="xl"
                   className="min-w-48"
                   asChild
