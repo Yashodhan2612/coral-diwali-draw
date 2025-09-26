@@ -136,7 +136,7 @@ const NewRaffleForm = () => {
           <div className="mb-4 text-center">
             <h2 className="text-lg font-semibold mb-1 flex items-center justify-center gap-2 text-primary">
               <Sparkles className="h-5 w-5" />
-              Join the Celebration
+              Register Now!
               <Sparkles className="h-5 w-5" />
             </h2>
             <p className="text-sm text-muted-foreground">
@@ -191,7 +191,7 @@ const NewRaffleForm = () => {
             {/* Phone & Identity Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="space-y-1">
-                <Label htmlFor="phone" className="text-sm">Phone *</Label>
+                <Label htmlFor="phone" className="text-sm">Phone Number *</Label>
                 <Input
                   id="phone"
                   type="tel"
@@ -208,7 +208,7 @@ const NewRaffleForm = () => {
               </div>
               
               <div className="space-y-1">
-                <Label htmlFor="identity" className="text-sm">Who are you? *</Label>
+                <Label htmlFor="identity" className="text-sm">About yourself? *</Label>
                 <Select 
                   value={formData.identity} 
                   onValueChange={(value) => handleInputChange('identity', value)}
@@ -222,13 +222,13 @@ const NewRaffleForm = () => {
                   </SelectTrigger>
                   <SelectContent className="bg-popover border border-border shadow-lg">
                     <SelectItem value="kid-8-13">
-                      Kid (8-13 years)
+                      I am a Kid (8-13 years)
                     </SelectItem>
                     <SelectItem value="parent-8-13">
-                      Parent of kid (8-13 years)
+                      I am a Parent of a kid (8-13 years)
                     </SelectItem>
                     <SelectItem value="neither">
-                      Neither
+                      Neither of above
                     </SelectItem>
                   </SelectContent>
                 </Select>
