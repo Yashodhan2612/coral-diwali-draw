@@ -47,14 +47,14 @@
     
     --muted: 225 20% 96%;
     --muted-foreground: 225 30% 35%;
-    --accent: 327 84% 64%; /* Pink Glow */
+    --accent: 11 87% 55%; /* Updated to primary orange */
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 225 20% 90%;
     --input: 225 20% 96%;
-    --ring: 0 73% 70%;
+    --ring: 11 87% 55%; /* Updated to primary orange */
     
     /* Gradients */
     --gradient-festive: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--gold)));
@@ -122,14 +122,14 @@
     
     --muted: 225 60% 15%;
     --muted-foreground: 0 0% 72%;
-    --accent: 327 84% 64%;
+    --accent: 11 87% 55%; /* Updated to primary orange */
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 225 60% 20%;
     --input: 225 60% 15%;
-    --ring: 0 73% 70%;
+    --ring: 11 87% 55%; /* Updated to primary orange */
     
     /* Enhanced gradients for dark mode */
     --gradient-festive: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--gold)));
