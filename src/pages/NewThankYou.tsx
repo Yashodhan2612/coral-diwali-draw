@@ -16,14 +16,14 @@ const flUsps = [
   {
     icon: GamepadIcon,
     text: 'Fun Learning Games',
-    color: 'bg-secondary/20 text-secondary border-secondary/30',
-    iconColor: 'text-secondary',
+    color: 'bg-pink-glow/20 text-pink-glow border-pink-glow/30',
+    iconColor: 'text-pink-glow',
   },
   {
     icon: Star,
     text: 'Future-Ready Skills',
-    color: 'bg-accent/20 text-accent border-accent/30',
-    iconColor: 'text-accent',
+    color: 'bg-pink-glow/20 text-pink-glow border-pink-glow/30',
+    iconColor: 'text-pink-glow',
   },
 ];
 
@@ -58,7 +58,7 @@ const NewThankYou = () => {
                 transition={{ duration: 0.5, delay: 0.2, type: "spring", bounce: 0.4 }}
               >
                 {/* FL Class Banner - 320x50 style for mobile */}
-                <div className="w-full h-12 sm:h-16 rounded-lg overflow-hidden bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center border-2 border-primary/20">
+                <div className="w-full h-12 sm:h-16 rounded-lg overflow-hidden bg-gradient-to-r from-primary/20 via-pink-glow/20 to-pink-glow/20 flex items-center justify-center border-2 border-primary/20">
                   <div className="text-center">
                     <div className="flex items-center gap-2 text-sm sm:text-base font-semibold text-primary">
                       <span>🏦💡</span>
@@ -72,7 +72,7 @@ const NewThankYou = () => {
                 <p className="text-lg font-semibold text-primary mb-2">Coral Academy's</p>
                 <h1 className="text-hero mb-6">
                   Financial Literacy for Kids{' '}
-                  <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-primary via-pink-glow to-pink-glow bg-clip-text text-transparent">
                     (8–13)
                   </span>
                 </h1>
@@ -108,7 +108,7 @@ const NewThankYou = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               data-testid="thankyou-fl-waitlist"
             >
-              <div className="flex items-center justify-center gap-3 p-6 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 border border-primary/20 rounded-xl max-w-md mx-auto">
+              <div className="flex items-center justify-center gap-3 p-6 bg-gradient-to-r from-primary/5 via-pink-glow/5 to-pink-glow/5 border border-primary/20 rounded-xl max-w-md mx-auto">
                 <Checkbox
                   id="waitlist"
                   checked={waitlistChecked}
@@ -128,7 +128,7 @@ const NewThankYou = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 border border-primary/20 rounded-xl p-8 max-w-2xl mx-auto">
+              <div className="bg-gradient-to-r from-primary/10 via-pink-glow/10 to-pink-glow/10 border border-primary/20 rounded-xl p-8 max-w-2xl mx-auto">
                 <div className="text-4xl mb-4">🙏</div>
                 <h2 className="text-2xl font-bold mb-4 text-primary">Thanks for confirming!</h2>
                 <p className="text-foreground-muted">
@@ -183,7 +183,7 @@ const NewThankYou = () => {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-full hover:bg-secondary/10 hover:border-secondary/30 hover:text-secondary transition-all duration-200"
+                    className="rounded-full hover:bg-pink-glow/10 hover:border-pink-glow/30 hover:text-pink-glow transition-all duration-200"
                     asChild
                   >
                     <a 
