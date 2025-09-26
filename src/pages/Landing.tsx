@@ -75,11 +75,11 @@ const Landing = () => {
                 <span className="text-primary">
                   Diwali
                 </span>{' '}
-                with Coral —{' '}
-                <span className="text-secondary">
+                with Coral Academy —{' '}
+                <span className="text-yellow">
                   Win Amazing Prizes
                 </span>{' '}
-                + Enjoy VR Fun
+                & Enjoy VR Fun
               </h1>
               
               <p className="text-sub-hero text-foreground-muted mb-8" data-testid="hero-subheading">
