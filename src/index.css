@@ -9,18 +9,29 @@
 
 @layer base {
   :root {
-    /* Light Mode - Clean and Bright with better contrast */
+    /* Light Mode - New PRD Color Tokens */
     --background: 225 50% 97%; /* Softer cream background */
     --surface: 0 0% 100%; /* #FFFFFF */
     --foreground: 225 47% 15%; /* #0D1328 */
     --foreground-muted: 225 30% 35%; /* #3B4361 */
     
-    /* Diwali Festive Colors */
-    --coral: 0 73% 70%; /* #FF6B6B */
+    /* PRD Light Mode Tokens */
+    --primary: 11 87% 55%; /* #F05A26 */
+    --primary-text: 11 88% 60%; /* #F76431 */
+    --primary-bg: 11 87% 55% / 16%; /* rgba(240, 90, 38, 0.16) */
+    --yellow: 43 93% 51%; /* #F3AD09 */
+    --yellow-bg: 43 93% 51% / 13%; /* rgba(243, 173, 9, 0.13) */
+    --premium-blue: 192 85% 31%; /* #137289 */
+    --premium-blue-tone: 192 73% 39%; /* #2788A0 */
+    --premium-blue-bg: 192 85% 31% / 14%; /* rgba(19, 114, 137, 0.14) */
+    --free-trial: 228 100% 66%; /* #4467FF */
+    
+    /* Legacy Diwali Colors (mapped to new tokens) */
+    --coral: 11 88% 60%; /* Mapped to primary-text */
     --coral-foreground: 0 0% 100%;
-    --gold: 42 91% 65%; /* #F6C453 */
+    --gold: 43 93% 51%; /* Mapped to yellow */
     --gold-foreground: 225 47% 15%;
-    --pink-glow: 327 84% 64%; /* #F05BB5 */
+    --pink-glow: 327 84% 64%; /* Keep existing for gradients */
     --pink-glow-foreground: 0 0% 100%;
     
     /* Component Colors */
@@ -68,12 +79,35 @@
     --foreground: 0 0% 92%; /* rgba(255,255,255,0.92) */
     --foreground-muted: 0 0% 72%; /* rgba(255,255,255,0.72) */
     
-    /* Diwali colors remain vibrant in dark mode */
-    --coral: 0 73% 70%;
+    /* PRD Dark Mode Tokens */
+    --primary-dark: 11 88% 59%; /* #F65F2B */
+    --primary-text-dark: 11 87% 55%; /* #F05A26 */
+    --primary-bg-dark: 11 72% 48% / 20%; /* rgba(216, 76, 28, 0.20) */
+    --sea-bg: 194 86% 17%; /* #0C3B46 */
+    --positive: 174 81% 43%; /* #1ABAA2 */
+    --positive-bg: 174 81% 43% / 17%; /* rgba(26, 186, 162, 0.17) */
+    --destructive: 0 64% 57%; /* #DF3F3F */
+    --destructive-bg: 0 59% 48% / 15%; /* rgba(194, 50, 50, 0.15) */
+    --review-yellow: 43 56% 58%; /* #E2BB46 */
+    --yellow-dark: 43 100% 71%; /* #FFC847 */
+    --yellow-bg-dark: 43 100% 71% / 14%; /* rgba(255, 200, 71, 0.14) */
+    --premium-blue-dark: 192 74% 36%; /* #1F8299 */
+    --premium-blue-tone-dark: 192 72% 32%; /* #226D80 */
+    --premium-blue-bg-dark: 192 74% 36% / 14%; /* rgba(31, 130, 153, 0.14) */
+    --free-trial-dark: 228 100% 71%; /* #5675FF */
+    --free-trial-bg-dark: 228 100% 71% / 16%; /* rgba(86,117,255,0.16) */
+    --app-bg-dark: 0 2% 9%; /* #181919 */
+    --modal-bg-dark: 240 3% 14%; /* #242426 */
+    --secondary-btn-bg-dark: 0 0% 100% / 4%; /* rgba(255,255,255,0.04) */
+    --type-bg-dark: 235 79% 92% / 4%; /* rgba(220,220,249,0.04) */
+    --secondary-system-dark: 241 14% 59% / 10%; /* rgba(139,139,159,0.10) */
+    
+    /* Legacy mapped to new tokens */
+    --coral: 11 88% 59%; /* Mapped to primary-dark */
     --coral-foreground: 0 0% 100%;
-    --gold: 42 91% 65%;
+    --gold: 43 100% 71%; /* Mapped to yellow-dark */
     --gold-foreground: 225 100% 8%;
-    --pink-glow: 327 84% 64%;
+    --pink-glow: 327 84% 64%; /* Keep existing for gradients */
     --pink-glow-foreground: 0 0% 100%;
     
     --card: 225 88% 12%;

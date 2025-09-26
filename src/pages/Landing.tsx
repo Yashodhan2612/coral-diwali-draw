@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
-import RaffleForm from '@/components/RaffleForm';
-import HowItWorks from '@/components/HowItWorks';
+import NewRaffleForm from '@/components/NewRaffleForm';
 import USPChips from '@/components/USPChips';
-import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 
 const Landing = () => {
@@ -12,17 +10,60 @@ const Landing = () => {
       {/* Background blobs removed */}
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-8 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center space-y-8">
-            {/* Hero Copy */}
+      {/* Hero Section - 2-Column Layout */}
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-7xl">
+          {/* Mobile Layout */}
+          <div className="lg:hidden">
+            <div className="text-center space-y-8">
+              {/* Hero Copy */}
+              <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+              >
+                <h1 className="text-hero mb-6" data-testid="hero-heading">
+                  Celebrate{' '}
+                  <span className="bg-gradient-festive bg-clip-text text-transparent">
+                    Diwali
+                  </span>{' '}
+                  with Coral —{' '}
+                  <span className="bg-gradient-glow bg-clip-text text-transparent">
+                    Win Amazing Prizes
+                  </span>{' '}
+                  + Enjoy VR Fun
+                </h1>
+                
+                <p className="text-sub-hero text-foreground-muted mb-8" data-testid="hero-subheading">
+                  Fill the form to join the raffle and get special VR access at the event. 
+                  Experience immersive learning while celebrating the festival of lights and win exciting prizes!
+                </p>
+              </motion.div>
+
+              {/* Form Card - Mobile (within first scroll) */}
+              <motion.div
+                className="relative z-10 flex justify-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+              >
+                <div className="w-full max-w-md">
+                  <NewRaffleForm />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Desktop/Tablet 2-Column Layout */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Tagline/Heading */}
             <motion.div
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
+              className="text-left"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <h1 className="text-hero mb-6">
+              <h1 className="text-hero mb-6" data-testid="hero-heading">
                 Celebrate{' '}
                 <span className="bg-gradient-festive bg-clip-text text-transparent">
                   Diwali
@@ -34,22 +75,20 @@ const Landing = () => {
                 + Enjoy VR Fun
               </h1>
               
-              <p className="text-sub-hero text-foreground-muted mb-8">
+              <p className="text-sub-hero text-foreground-muted mb-8" data-testid="hero-subheading">
                 Fill the form to join the raffle and get special VR access at the event. 
                 Experience immersive learning while celebrating the festival of lights and win exciting prizes!
               </p>
             </motion.div>
 
-            {/* Form Card */}
+            {/* Right Column - Form */}
             <motion.div
-              className="relative z-10 flex justify-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              className="relative z-10"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <div className="w-full max-w-md">
-                <RaffleForm />
-              </div>
+              <NewRaffleForm />
             </motion.div>
           </div>
         </div>
@@ -57,12 +96,6 @@ const Landing = () => {
 
       {/* USP Chips */}
       <USPChips />
-
-      {/* How It Works */}
-      <HowItWorks />
-
-      {/* FAQ */}
-      <FAQ />
 
       {/* Footer */}
       <Footer />

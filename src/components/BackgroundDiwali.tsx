@@ -13,30 +13,6 @@ const BackgroundDiwali = () => {
     return () => mq.removeEventListener('change', handler);
   }, []);
 
-  // Dev-only visibility check for headings to ensure backgrounds never obscure content
-  useEffect(() => {
-    if (import.meta.env.PROD) return;
-    const ids = ['howitworks-heading', 'faq-heading'];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (!e.isIntersecting) {
-            // eslint-disable-next-line no-console
-            console.warn(`[Design Watch] Heading not visible: #${(e.target as HTMLElement).id || e.target.getAttribute('data-testid')}`);
-          }
-        });
-      },
-      { threshold: 0.01 }
-    );
-    ids.forEach((id) => {
-      const byId = document.getElementById(id);
-      const byTestId = document.querySelector(`[data-testid="${id}"]`);
-      if (byId) observer.observe(byId);
-      if (byTestId) observer.observe(byTestId);
-    });
-    return () => observer.disconnect();
-  }, []);
-
   const float = useMemo(
     () => ({
       y: prefersReducedMotion ? 0 : [0, -4, 0, -2, 0],
@@ -50,7 +26,7 @@ const BackgroundDiwali = () => {
     []
   );
 
-  return null; // fully removed per step 1
+  return null; // Background removed per PRD requirements
 };
 
 export default BackgroundDiwali;
