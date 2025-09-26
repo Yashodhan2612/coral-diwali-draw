@@ -27,7 +27,10 @@ const Landing = () => {
                   <span className="text-primary">
                     Diwali
                   </span>{' '}
-                  with Coral Academy -{' '}
+                  with{' '}
+                  <span className="text-primary">Coral</span>{' '}
+                  <span className="text-secondary">Academy</span>{' '}
+                  -{' '}
                   <span className="text-yellow">
                     Win Amazing Prizes
                   </span>
@@ -75,7 +78,10 @@ const Landing = () => {
                 <span className="text-primary">
                   Diwali
                 </span>{' '}
-                with Coral Academy —{' '}
+                with{' '}
+                <span className="text-primary">Coral</span>{' '}
+                <span className="text-secondary">Academy</span>{' '}
+                —{' '}
                 <span className="text-yellow">
                   Win Amazing Prizes
                 </span>{' '}
