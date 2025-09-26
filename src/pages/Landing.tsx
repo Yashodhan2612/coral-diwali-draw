@@ -72,11 +72,11 @@ const Landing = () => {
             >
               <h1 className="text-hero mb-6" data-testid="hero-heading">
                 Celebrate{' '}
-                <span className="bg-gradient-festive bg-clip-text text-transparent">
+                <span className="text-primary">
                   Diwali
                 </span>{' '}
                 with Coral —{' '}
-                <span className="bg-gradient-glow bg-clip-text text-transparent">
+                <span className="text-secondary">
                   Win Amazing Prizes
                 </span>{' '}
                 + Enjoy VR Fun
