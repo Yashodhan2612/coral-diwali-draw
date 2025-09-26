@@ -66,7 +66,7 @@ const NewThankYou = () => {
             <div className="mb-4">
               <div className="w-full rounded-lg overflow-hidden border border-border bg-card">
                 <img
-                  src="/placeholder.svg"
+                  src="/src/assets/financial-literacy-class.jpg"
                   alt="Kids learning money skills in an interactive Financial Literacy session."
                   className="w-full h-[200px] md:h-64 object-cover"
                 />
