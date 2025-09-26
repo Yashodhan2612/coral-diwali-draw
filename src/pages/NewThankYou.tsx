@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/enhanced-button';
 import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import flImage from '@/assets/financial-literacy-class.jpg';
 import { useToast } from '@/hooks/use-toast';
 
 const flUsps = [
@@ -66,7 +67,7 @@ const NewThankYou = () => {
             <div className="mb-4">
               <div className="w-full rounded-lg overflow-hidden border border-border bg-card">
                 <img
-                  src="/src/assets/financial-literacy-class.jpg"
+                  src={flImage}
                   alt="Kids learning money skills in an interactive Financial Literacy session."
                   className="w-full h-[200px] md:h-64 object-cover"
                 />
