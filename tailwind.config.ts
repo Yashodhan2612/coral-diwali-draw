@@ -42,10 +42,10 @@ export default {
         },
         surface: "hsl(var(--surface))",
         
-        // Diwali festive colors
+        // Diwali festive colors - Updated with new primary
         coral: {
-          DEFAULT: "hsl(var(--coral))",
-          foreground: "hsl(var(--coral-foreground))",
+          DEFAULT: "hsl(var(--primary))", // Using primary token
+          foreground: "hsl(var(--primary-foreground))",
         },
         gold: {
           DEFAULT: "hsl(var(--gold))",
@@ -54,6 +54,10 @@ export default {
         "pink-glow": {
           DEFAULT: "hsl(var(--pink-glow))",
           foreground: "hsl(var(--pink-glow-foreground))",
+        },
+        "premium-blue": {
+          DEFAULT: "hsl(var(--premium-blue-tone))", // Using new premium blue tone
+          foreground: "hsl(var(--secondary-foreground))",
         },
         
         primary: {

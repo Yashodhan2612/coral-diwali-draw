@@ -29,8 +29,18 @@ const usps = [
 
 const USPChips = () => {
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8">
+    <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
+        {/* Heading for USP Chips */}
+        <div className="text-center mb-8">
+          <h2 className="typo-h3 text-foreground mb-2">
+            Why Choose Coral Academy?
+          </h2>
+          <p className="text-muted-foreground">
+            Empowering young minds with innovative learning experiences
+          </p>
+        </div>
+        
         <div className="flex flex-wrap justify-center gap-4" data-testid="usp-chips">
           {usps.map((usp, index) => (
             <div

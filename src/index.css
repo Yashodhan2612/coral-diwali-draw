@@ -17,7 +17,7 @@
     
     /* PRD Light Mode Tokens */
     --primary: 11 87% 55%; /* #F05A26 */
-    --primary-text: 11 88% 60%; /* #F76431 */
+    --primary-text: 11 87% 55%; /* #F05A26 */
     --primary-bg: 11 87% 55% / 16%; /* rgba(240, 90, 38, 0.16) */
     --yellow: 43 93% 51%; /* #F3AD09 */
     --yellow-bg: 43 93% 51% / 13%; /* rgba(243, 173, 9, 0.13) */
@@ -40,10 +40,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 225 47% 15%;
     
-    --primary: 0 73% 70%; /* Coral */
+    --primary: 11 87% 55%; /* #F05A26 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 42 91% 65%; /* Gold */
-    --secondary-foreground: 225 47% 15%;
+    --secondary: 192 73% 39%; /* #2788A0 */
+    --secondary-foreground: 0 0% 100%;
     
     --muted: 225 20% 96%;
     --muted-foreground: 225 30% 35%;
@@ -115,10 +115,10 @@
     --popover: 225 88% 12%;
     --popover-foreground: 0 0% 92%;
     
-    --primary: 0 73% 70%;
+    --primary: 11 87% 55%; /* #F05A26 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 42 91% 65%;
-    --secondary-foreground: 225 100% 8%;
+    --secondary: 192 73% 39%; /* #2788A0 */
+    --secondary-foreground: 0 0% 100%;
     
     --muted: 225 60% 15%;
     --muted-foreground: 0 0% 72%;
