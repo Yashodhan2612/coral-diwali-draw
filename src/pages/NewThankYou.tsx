@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/enhanced-button';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Label } from '@/components/ui/label';
-import { ExternalLink, Instagram, Facebook, DollarSign, GamepadIcon, Star } from 'lucide-react';
+import { Instagram, Facebook, DollarSign, GamepadIcon, Star } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import { useToast } from '@/hooks/use-toast';
 
 const flUsps = [
   {
@@ -28,175 +27,153 @@ const flUsps = [
 ];
 
 const NewThankYou = () => {
-  const [waitlistChecked, setWaitlistChecked] = useState(false);
+  // Scroll 1: MCQ state
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [showReveal, setShowReveal] = useState(false);
+
+  const { toast } = useToast();
 
   useEffect(() => {
-    // Update page title for SEO
     document.title = 'Thank You - Financial Literacy Program | Coral Academy';
-    
-    // Optional: Track page view or other analytics
-    console.log('Thank you page viewed');
+    // No-op: we will link this to the earlier home page form entry
   }, []);
 
   return (
     <div className="min-h-screen relative">
       <Navbar />
       
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            {/* FL Class Banner - Mobile Optimized */}
-            <div className="mb-8" data-testid="thankyou-fl-banner">
-              <motion.div
-                className="w-full max-w-sm mx-auto mb-6"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2, type: "spring", bounce: 0.4 }}
-              >
-                {/* FL Class Banner - 320x50 style for mobile */}
-                <div className="w-full h-12 sm:h-16 rounded-lg overflow-hidden bg-primary/10 flex items-center justify-center border-2 border-primary/20">
-                  <div className="text-center">
-                    <div className="flex items-center gap-2 text-sm sm:text-base font-semibold text-primary">
-                      <span>🏦💡</span>
-                      <span>Financial Literacy Class</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+      {/* Scroll 1: Hero + MCQ + USPs */}
+      <section className="relative pt-24 pb-10 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-md">
+          {/* Eyebrow */}
+          <div className="w-full mb-4">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+              Financial Literacy Class · Ages 8–13
+            </span>
+          </div>
 
-              <div className="text-center">
-                <p className="text-lg font-semibold text-primary mb-2">Coral Academy's</p>
-                <h1 className="text-hero mb-6">
-                  Financial Literacy for Kids{' '}
-                  <span className="text-primary">(8–13)</span>
-                </h1>
-              </div>
+          {/* H1 + Subhead */}
+          <h1 className="text-3xl font-bold leading-snug mb-2">
+            Could your child explain compound interest like this?
+          </h1>
+          <p className="text-sm text-muted-foreground mb-4">
+            After a few fun sessions, they will—confidently.
+          </p>
+
+          {/* Class Image */}
+          <div className="mb-4">
+            <div className="w-full rounded-lg overflow-hidden border border-border bg-card">
+              <img
+                src="/placeholder.svg"
+                alt="Kids learning money skills in an interactive Financial Literacy session."
+                className="w-full h-[200px] object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Mini Challenge (MCQ) */}
+          <div className="mb-4">
+            <p className="text-xs font-medium text-muted-foreground mb-2">Mini challenge (tap to answer)</p>
+            <p className="text-sm font-semibold mb-3">
+              If you invest $1,000 for 10 years, which ends up largest?
+            </p>
+
+            <div className="flex flex-col gap-2" role="radiogroup" aria-label="Compound interest question">
+              {[
+                { key: 'A', text: '8% simple interest each year' },
+                { key: 'B', text: '7% compound interest each year' },
+                { key: 'C', text: '6% compound interest + $10/mo added' },
+              ].map((opt) => {
+                const selected = selectedOption === opt.key;
+                return (
+                  <button
+                    key={opt.key}
+                    type="button"
+                    onClick={() => { setSelectedOption(opt.key); setShowReveal(true); }}
+                    aria-pressed={selected}
+                    className={
+                      `w-full text-left px-3 py-2 rounded-full border text-sm ` +
+                      (selected
+                        ? 'bg-premium-blue/10 border-premium-blue text-premium-blue'
+                        : 'bg-background border-border hover:border-premium-blue/40')
+                    }
+                  >
+                    <span className="font-semibold mr-2">{opt.key}.</span>{opt.text}
+                  </button>
+                );
+              })}
             </div>
 
-            {/* 3 USP Chips - Similar to Home Page */}
-            <motion.div
-              className="mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              data-testid="thankyou-fl-usps"
-            >
-              <div className="flex flex-wrap justify-center gap-4">
-                {flUsps.map((usp, index) => (
-                  <div
-                    key={index}
-                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border ring-1 ring-border/50 text-sm font-medium transition-all duration-200 hover:scale-105 ${usp.color}`}
-                  >
-                    <usp.icon className={`h-5 w-5 ${usp.iconColor}`} />
-                    <span>{usp.text}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Waitlist Checkbox */}
-            <motion.div
-              className="mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              data-testid="thankyou-fl-waitlist"
-            >
-              <div className="flex items-center justify-center gap-3 p-6 bg-primary/5 border border-primary/20 rounded-xl max-w-md mx-auto">
-                <Checkbox
-                  id="waitlist"
-                  checked={waitlistChecked}
-                  onCheckedChange={(checked) => setWaitlistChecked(checked as boolean)}
-                  className="shrink-0"
-                />
-                <Label htmlFor="waitlist" className="cursor-pointer font-medium">
-                  Add me to the Financial Literacy class waitlist
-                </Label>
-              </div>
-            </motion.div>
-
-            {/* Final Thank-You */}
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              <div className="bg-primary/10 border border-primary/20 rounded-xl p-8 max-w-2xl mx-auto">
-                <div className="text-4xl mb-4">🙏</div>
-                <h2 className="text-2xl font-bold mb-4 text-primary">Thanks for confirming!</h2>
-                <p className="text-foreground-muted">
-                  We'll be in touch with class updates and event details. 
-                  {waitlistChecked && ' You\'ve been added to our Financial Literacy waitlist!'}
+            {showReveal && (
+              <div className="mt-3 text-sm rounded-md border border-primary/20 bg-primary/5 p-3">
+                <p className="font-semibold text-primary mb-1">Correct: C.</p>
+                <p className="text-foreground">
+                  Consistent deposits + compounding beat a higher static rate.
                 </p>
+                <p className="text-muted-foreground mt-1">
+                  (8% simple ≈ $1,800; 7% compound ≈ $1,967; 6% compound + $10/mo ≈ $3,458.)
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">Education only, not financial advice.</p>
               </div>
-            </motion.div>
+            )}
+          </div>
 
-            {/* CTAs */}
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.0 }}
-            >
-              {/* Primary CTA */}
-              <div className="mb-8">
-                <Button
-                  variant="default"
-                  size="xl"
-                  className="min-w-48"
-                  asChild
+          {/* USPs row (single line if space) */}
+          <div className="mb-3">
+            <div className="flex flex-wrap justify-center gap-2">
+              {flUsps.map((usp, index) => (
+                <div
+                  key={index}
+                  className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-medium ${usp.color}`}
                 >
-                  <a href="https://www.coralacademy.com" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-5 w-5" />
-                    Visit Coral Academy
-                  </a>
-                </Button>
-              </div>
-
-              {/* Secondary Social CTAs */}
-              <div className="space-y-4">
-                <p className="text-foreground-muted">Follow us for updates:</p>
-                <div className="flex justify-center gap-4">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full hover:bg-primary/10 hover:border-primary/30 hover:text-primary transition-all duration-200"
-                    asChild
-                  >
-                    <a 
-                      href="#" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      aria-label="Follow us on Instagram"
-                    >
-                      <Instagram className="h-5 w-5" />
-                    </a>
-                  </Button>
-                  
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full hover:bg-pink-glow/10 hover:border-pink-glow/30 hover:text-pink-glow transition-all duration-200"
-                    asChild
-                  >
-                    <a 
-                      href="#" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      aria-label="Follow us on Facebook"
-                    >
-                      <Facebook className="h-5 w-5" />
-                    </a>
-                  </Button>
+                  <usp.icon className={`h-4 w-4 ${usp.iconColor}`} />
+                  <span>{usp.text}</span>
                 </div>
-              </div>
-            </motion.div>
-          </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA hint */}
+          <p className="text-center text-xs text-muted-foreground">Scroll to join the waitlist ↓</p>
+        </div>
+      </section>
+
+      {/* Scroll 2: Join Waitlist */}
+      <section className="relative pt-6 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-md">
+          <h2 className="text-xl font-semibold mb-1">Join the Financial Literacy Class Waitlist</h2>
+          <p className="text-sm text-muted-foreground mb-4">We’ll email dates & priority slots. Opt out anytime.</p>
+
+          <div className="space-y-3" aria-live="polite">
+            <Button
+              type="button"
+              className="w-full h-10 bg-primary hover:bg-primary/90 text-white font-medium"
+              onClick={() => {
+                try { localStorage.setItem('flWaitlistJoined', 'true'); } catch {}
+                toast({
+                  title: '🎉 Thanks! You’re on the Financial Literacy waitlist.',
+                  description: 'We’ll send session dates and early-access slots soon.',
+                  duration: 10000,
+                });
+              }}
+            >
+              Join Waitlist
+            </Button>
+            <p className="text-xs text-muted-foreground text-center">We’ll only send class updates—no spam.</p>
+          </div>
+
+          {/* Secondary links */}
+          <div className="mt-4 flex items-center justify-center gap-4 text-sm">
+            <a href="#" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground">
+              <Instagram className="h-4 w-4" /> Instagram
+            </a>
+            <a href="#" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground">
+              <Facebook className="h-4 w-4" /> Facebook
+            </a>
+            <a href="https://www.coralacademy.com" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground" rel="noopener noreferrer">
+              Visit Coral Academy
+            </a>
+          </div>
         </div>
       </section>
     </div>
