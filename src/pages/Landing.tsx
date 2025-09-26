@@ -15,29 +15,23 @@ const Landing = () => {
         <div className="container mx-auto max-w-7xl">
           {/* Mobile Layout */}
           <div className="lg:hidden">
-            <div className="text-center space-y-8">
-              {/* Hero Copy */}
+            <div className="text-center space-y-6">
+              {/* Hero Copy - Shortened */}
               <motion.div
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                <h1 className="text-hero mb-6" data-testid="hero-heading">
+                <h1 className="text-3xl font-bold mb-4" data-testid="hero-heading">
                   Celebrate{' '}
-                  <span className="bg-gradient-festive bg-clip-text text-transparent">
+                  <span className="text-primary">
                     Diwali
                   </span>{' '}
-                  with Coral —{' '}
-                  <span className="bg-gradient-glow bg-clip-text text-transparent">
+                  with Coral Academy -{' '}
+                  <span className="text-yellow">
                     Win Amazing Prizes
-                  </span>{' '}
-                  + Enjoy VR Fun
+                  </span>
                 </h1>
-                
-                <p className="text-sub-hero text-foreground-muted mb-8" data-testid="hero-subheading">
-                  Fill the form to join the raffle and get special VR access at the event. 
-                  Experience immersive learning while celebrating the festival of lights and win exciting prizes!
-                </p>
               </motion.div>
 
               {/* Form Card - Mobile (within first scroll) */}
@@ -50,6 +44,19 @@ const Landing = () => {
                 <div className="w-full max-w-md">
                   <NewRaffleForm />
                 </div>
+              </motion.div>
+
+              {/* Subheading moved below form */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+                className="px-4"
+              >
+                <p className="text-sm text-muted-foreground" data-testid="hero-subheading">
+                  Fill the form to join the raffle and get special VR access at the event. 
+                  Experience immersive learning while celebrating the festival of lights and win exciting prizes!
+                </p>
               </motion.div>
             </div>
           </div>

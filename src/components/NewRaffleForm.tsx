@@ -132,116 +132,116 @@ const NewRaffleForm = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="card-festive p-6 backdrop-blur-md border-2 bg-card/95">
-          <div className="mb-6 text-center">
-            <h2 className="text-2xl font-bold mb-2 flex items-center justify-center gap-2">
-              <Sparkles className="h-6 w-6 text-gold" />
+        <div className="rounded-xl border border-primary/20 bg-card/95 backdrop-blur-md p-4 sm:p-6 shadow-lg">
+          <div className="mb-4 text-center">
+            <h2 className="text-lg font-semibold mb-1 flex items-center justify-center gap-2 text-primary">
+              <Sparkles className="h-5 w-5" />
               Join the Celebration
-              <Sparkles className="h-6 w-6 text-coral" />
+              <Sparkles className="h-5 w-5" />
             </h2>
-            <p className="text-foreground-muted">
+            <p className="text-sm text-muted-foreground">
               Enter for raffle prizes and VR experience!
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5" data-testid="raffle-form">
+          <form onSubmit={handleSubmit} className="space-y-4" data-testid="raffle-form">
             {/* Radio Group */}
             <FormRadioGroup 
               value={formData.interest}
               onValueChange={(value) => handleInputChange('interest', value)}
             />
 
-            {/* Name Field */}
-            <div className="space-y-2">
-              <Label htmlFor="name">Name *</Label>
-              <Input
-                id="name"
-                data-testid="form-name"
-                value={formData.name}
-                onChange={(e) => handleInputChange('name', e.target.value)}
-                placeholder="Your full name"
-                className={errors.name ? 'border-destructive' : ''}
-                aria-invalid={!!errors.name}
-              />
-              {errors.name && (
-                <p className="text-sm text-destructive">{errors.name}</p>
-              )}
+            {/* Name & Email Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="space-y-1">
+                <Label htmlFor="name" className="text-sm">Name *</Label>
+                <Input
+                  id="name"
+                  data-testid="form-name"
+                  value={formData.name}
+                  onChange={(e) => handleInputChange('name', e.target.value)}
+                  placeholder="Your full name"
+                  className={errors.name ? 'border-destructive h-9' : 'h-9'}
+                  aria-invalid={!!errors.name}
+                />
+                {errors.name && (
+                  <p className="text-xs text-destructive">{errors.name}</p>
+                )}
+              </div>
+              
+              <div className="space-y-1">
+                <Label htmlFor="email" className="text-sm">Email *</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  data-testid="form-email"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  placeholder="your@email.com"
+                  pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                  className={errors.email ? 'border-destructive h-9' : 'h-9'}
+                  aria-invalid={!!errors.email}
+                />
+                {errors.email && (
+                  <p className="text-xs text-destructive">{errors.email}</p>
+                )}
+              </div>
             </div>
 
-            {/* Email Field */}
-            <div className="space-y-2">
-              <Label htmlFor="email">Email *</Label>
-              <Input
-                id="email"
-                type="email"
-                data-testid="form-email"
-                value={formData.email}
-                onChange={(e) => handleInputChange('email', e.target.value)}
-                placeholder="your@email.com"
-                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
-                className={errors.email ? 'border-destructive' : ''}
-                aria-invalid={!!errors.email}
-              />
-              {errors.email && (
-                <p className="text-sm text-destructive">{errors.email}</p>
-              )}
-            </div>
-
-            {/* Phone Number Field */}
-            <div className="space-y-2">
-              <Label htmlFor="phone">Phone Number *</Label>
-              <Input
-                id="phone"
-                type="tel"
-                data-testid="form-phone"
-                value={formData.phone}
-                onChange={(e) => handleInputChange('phone', e.target.value)}
-                placeholder="Your phone number"
-                className={errors.phone ? 'border-destructive' : ''}
-                aria-invalid={!!errors.phone}
-              />
-              {errors.phone && (
-                <p className="text-sm text-destructive">{errors.phone}</p>
-              )}
-            </div>
-
-            {/* Identity Dropdown */}
-            <div className="space-y-2">
-              <Label htmlFor="identity">Who are you? *</Label>
-              <Select 
-                value={formData.identity} 
-                onValueChange={(value) => handleInputChange('identity', value)}
-              >
-                <SelectTrigger 
-                  className={errors.identity ? 'border-destructive' : ''}
-                  data-testid="form-identity"
-                  aria-invalid={!!errors.identity}
+            {/* Phone & Identity Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="space-y-1">
+                <Label htmlFor="phone" className="text-sm">Phone *</Label>
+                <Input
+                  id="phone"
+                  type="tel"
+                  data-testid="form-phone"
+                  value={formData.phone}
+                  onChange={(e) => handleInputChange('phone', e.target.value)}
+                  placeholder="Your phone number"
+                  className={errors.phone ? 'border-destructive h-9' : 'h-9'}
+                  aria-invalid={!!errors.phone}
+                />
+                {errors.phone && (
+                  <p className="text-xs text-destructive">{errors.phone}</p>
+                )}
+              </div>
+              
+              <div className="space-y-1">
+                <Label htmlFor="identity" className="text-sm">Who are you? *</Label>
+                <Select 
+                  value={formData.identity} 
+                  onValueChange={(value) => handleInputChange('identity', value)}
                 >
-                  <SelectValue placeholder="Select an option" />
-                </SelectTrigger>
-                <SelectContent className="bg-popover border border-border shadow-lg">
-                  <SelectItem value="kid-8-13">
-                    I am a kid in the age range of 8–13 yrs old
-                  </SelectItem>
-                  <SelectItem value="parent-8-13">
-                    I am a parent of a kid in the age range of 8–13 yrs old
-                  </SelectItem>
-                  <SelectItem value="neither">
-                    Neither
-                  </SelectItem>
-                </SelectContent>
-              </Select>
-              {errors.identity && (
-                <p className="text-sm text-destructive">{errors.identity}</p>
-              )}
+                  <SelectTrigger 
+                    className={errors.identity ? 'border-destructive h-9' : 'h-9'}
+                    data-testid="form-identity"
+                    aria-invalid={!!errors.identity}
+                  >
+                    <SelectValue placeholder="Select" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-popover border border-border shadow-lg">
+                    <SelectItem value="kid-8-13">
+                      Kid (8-13 years)
+                    </SelectItem>
+                    <SelectItem value="parent-8-13">
+                      Parent of kid (8-13 years)
+                    </SelectItem>
+                    <SelectItem value="neither">
+                      Neither
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+                {errors.identity && (
+                  <p className="text-xs text-destructive">{errors.identity}</p>
+                )}
+              </div>
             </div>
 
             {/* Submit Button */}
             <Button
               type="submit"
-              variant="festive"
-              size="xl"
-              className="w-full"
+              className="w-full h-10 bg-primary hover:bg-primary/90 text-white font-medium"
               disabled={isSubmitting}
               data-testid="form-submit"
             >
@@ -256,7 +256,7 @@ const NewRaffleForm = () => {
             </Button>
 
             {/* Disclaimer */}
-            <div className="text-xs text-foreground-muted text-center pt-2">
+            <div className="text-xs text-muted-foreground text-center pt-1">
               <p>
                 By filling this form, you agree to receive event updates via your registered email.
               </p>
