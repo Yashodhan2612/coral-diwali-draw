@@ -47,9 +47,9 @@ const NewThankYou = () => {
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl lg:grid lg:grid-cols-2 lg:gap-12">
           {/* Left column: Hero + Image + MCQ + USPs */}
-          <div className="max-w-xl">
+          <div className="max-w-xl mx-auto text-center">
             {/* Thank You Message */}
-            <div className="w-full mb-6 text-center">
+            <div className="w-full mb-6">
               <div className="flex items-center justify-center gap-2 mb-4">
                 <CheckCircle className="h-6 w-6 text-green-500" />
                 <p className="text-lg font-medium text-foreground">Thanks for your participation</p>
@@ -71,8 +71,8 @@ const NewThankYou = () => {
           </div>
 
           {/* Right column: Join Waitlist panel */}
-          <div className="mt-6 lg:mt-0 lg:border-l border-border lg:pl-12">
-            <div className="rounded-xl border border-primary/20 bg-card p-4 md:p-6">
+          <div className="mt-6 lg:mt-0 lg:border-l border-border lg:pl-12 mx-auto max-w-xl">
+            <div className="rounded-xl border border-primary/20 bg-card p-4 md:p-6 text-center">
               <h2 className="text-lg md:text-xl font-semibold mb-1">Join the Financial Literacy Class Waitlist</h2>
               <p className="text-sm text-muted-foreground mb-4">We’ll email dates & priority slots. Opt out anytime.</p>
 
