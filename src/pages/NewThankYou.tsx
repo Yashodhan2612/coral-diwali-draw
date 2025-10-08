@@ -60,7 +60,7 @@ const NewThankYou = () => {
 
             {/* H1 + Subhead */}
             <h1 className="text-xl md:text-2xl font-bold leading-snug mb-2">
-              Up next: our <span className="text-primary">Financial Literacy Curriculum</span>—designed to make learning money skills fun and lasting.
+              Coming soon: a <span className="text-primary">Financial Literacy Curriculum</span> Designed and Backed by <span className="underline decoration-wavy decoration-primary/70 decoration-2">Stanford Alums & Professors</span>
             </h1>
             <p className="text-sm md:text-base text-muted-foreground mb-4">
               Be first to know when enrollment opens—limited spots.
