@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/enhanced-button';
-import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star } from 'lucide-react';
+import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import flImage from '@/assets/financial-literacy-class.jpg';
 import { useToast } from '@/hooks/use-toast';
@@ -48,11 +48,13 @@ const NewThankYou = () => {
         <div className="container mx-auto max-w-6xl lg:grid lg:grid-cols-2 lg:gap-12">
           {/* Left column: Hero + Image + MCQ + USPs */}
           <div className="max-w-xl">
-            {/* Eyebrow */}
-            <div className="w-full mb-4">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
-                Financial Literacy Class · Ages 8–13
-              </span>
+            {/* Thank You Message */}
+            <div className="w-full mb-6 text-center">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <CheckCircle className="h-6 w-6 text-green-500" />
+                <p className="text-lg font-medium text-foreground">Thanks for your participation</p>
+              </div>
+              <div className="w-16 h-px bg-border mx-auto"></div>
             </div>
 
             {/* H1 + Subhead */}
