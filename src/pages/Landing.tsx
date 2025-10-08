@@ -57,7 +57,7 @@ const Landing = () => {
                 className="mt-8 px-2"
               >
                 <p className="text-base text-muted-foreground leading-relaxed" data-testid="hero-subheading">
-                  Fill the form to join the raffle and get special VR access at the event. 
+                  Get special VR access at the event. 
                   Experience immersive learning while celebrating the festival of lights and win exciting prizes!
                 </p>
               </motion.div>
@@ -89,7 +89,7 @@ const Landing = () => {
               </h1>
               
               <p className="text-sub-hero text-foreground-muted mb-8" data-testid="hero-subheading">
-                Fill the form to join the raffle and get special VR access at the event. 
+                Get special VR access at the event. 
                 Experience immersive learning while celebrating the festival of lights and win exciting prizes!
               </p>
             </motion.div>

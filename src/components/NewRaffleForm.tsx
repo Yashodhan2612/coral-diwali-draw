@@ -139,9 +139,6 @@ const NewRaffleForm = () => {
               Register Now!
               <Sparkles className="h-5 w-5" />
             </h2>
-            <p className="text-sm text-muted-foreground">
-              Enter for raffle prizes and VR experience!
-            </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4" data-testid="raffle-form">
@@ -222,7 +219,7 @@ const NewRaffleForm = () => {
                   </SelectTrigger>
                   <SelectContent className="bg-popover border border-border shadow-lg">
                     <SelectItem value="kid-8-13">
-                      I am a Kid (8-13 years)
+                      I am a kid (8-13 years)
                     </SelectItem>
                     <SelectItem value="parent-8-13">
                       I am a Parent of a kid (8-13 years)

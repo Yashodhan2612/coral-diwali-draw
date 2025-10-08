@@ -3,25 +3,25 @@ import { Users, Brain, Award, Heart } from 'lucide-react';
 const usps = [
   {
     icon: Users,
-    text: 'Live online classes (Ages 8–13)',
+    text: 'Live online classes (Ages 8-13)',
     color: 'bg-gold-glow/20 dark:bg-gold-glow/30 text-gold-glow-foreground border-gold-glow/30 dark:border-gold-glow/40',
     iconColor: 'text-coral',
   },
   {
     icon: Brain,
-    text: 'AI · Financial Literacy · Debate · Coding',
+    text: 'Financial Literacy ⚪️Entrepreneurship ⚪️Science ⚪️Coding',
     color: 'bg-gold-glow/20 dark:bg-gold-glow/30 text-gold-glow-foreground border-gold-glow/30 dark:border-gold-glow/40',
     iconColor: 'text-gold',
   },
   {
     icon: Award,
-    text: 'Vetted teachers',
+    text: 'Exceptional teachers',
     color: 'bg-gold-glow/20 dark:bg-gold-glow/30 text-gold-glow-foreground border-gold-glow/30 dark:border-gold-glow/40',
     iconColor: 'text-pink-glow',
   },
   {
     icon: Heart,
-    text: 'Trusted By Parents',
+    text: 'Loved by 700+ kids',
     color: 'bg-gold-glow/20 dark:bg-gold-glow/30 text-gold-glow-foreground border-gold-glow/30 dark:border-gold-glow/40',
     iconColor: 'text-accent',
   },
