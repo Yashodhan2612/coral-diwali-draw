@@ -9,7 +9,7 @@ const usps = [
   },
   {
     icon: Brain,
-    text: 'Financial Literacy ⚪️Entrepreneurship ⚪️Science ⚪️Coding',
+    text: 'Financial Literacy • Entrepreneurship • Science • Coding',
     color: 'bg-gold-glow/20 dark:bg-gold-glow/30 text-gold-glow-foreground border-gold-glow/30 dark:border-gold-glow/40',
     iconColor: 'text-gold',
   },
@@ -41,15 +41,14 @@ const USPChips = () => {
           </p>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-4" data-testid="usp-chips">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto" data-testid="usp-chips">
           {usps.map((usp, index) => (
             <div
               key={index}
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border ring-1 ring-border/50 dark:ring-border/60 text-sm font-medium transition-all duration-200 hover:scale-105 opacity-100 ${usp.color}`}
-              style={{ opacity: 1, transform: 'scale(1)' }}
+              className={`flex items-center gap-3 px-4 py-3 rounded-full border ring-1 ring-border/50 dark:ring-border/60 text-sm font-medium transition-all duration-200 hover:scale-105 ${usp.color}`}
             >
-              <usp.icon className={`h-5 w-5 ${usp.iconColor} drop-shadow-[0_0_6px_currentColor]`} />
-              <span className="[text-shadow:0_0_1px_rgba(0,0,0,0.12)] dark:[text-shadow:0_0_1px_rgba(255,255,255,0.06)]">{usp.text}</span>
+              <usp.icon className={`h-5 w-5 flex-shrink-0 ${usp.iconColor} drop-shadow-[0_0_6px_currentColor]`} />
+              <span className="[text-shadow:0_0_1px_rgba(0,0,0,0.12)] dark:[text-shadow:0_0_1px_rgba(255,255,255,0.06)] text-left leading-tight">{usp.text}</span>
             </div>
           ))}
         </div>
