@@ -74,7 +74,7 @@ const NewThankYou = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {/* Learning Outcome 1 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <TrendingUp className="h-5 w-5" />
                   </div>
@@ -84,7 +84,7 @@ const NewThankYou = () => {
                 </div>
 
                 {/* Learning Outcome 2 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Wallet className="h-5 w-5" />
                   </div>
@@ -94,7 +94,7 @@ const NewThankYou = () => {
                 </div>
 
                 {/* Learning Outcome 3 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Target className="h-5 w-5" />
                   </div>
@@ -104,7 +104,7 @@ const NewThankYou = () => {
                 </div>
 
                 {/* Learning Outcome 4 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Lightbulb className="h-5 w-5" />
                   </div>
@@ -181,7 +181,7 @@ const NewThankYou = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {/* Learning Outcome 1 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <TrendingUp className="h-5 w-5" />
                   </div>
@@ -191,7 +191,7 @@ const NewThankYou = () => {
                 </div>
 
                 {/* Learning Outcome 2 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Wallet className="h-5 w-5" />
                   </div>
@@ -201,7 +201,7 @@ const NewThankYou = () => {
                 </div>
 
                 {/* Learning Outcome 3 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Target className="h-5 w-5" />
                   </div>
@@ -211,7 +211,7 @@ const NewThankYou = () => {
                 </div>
 
                 {/* Learning Outcome 4 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Lightbulb className="h-5 w-5" />
                   </div>
