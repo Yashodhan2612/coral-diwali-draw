@@ -31,6 +31,7 @@ const NewThankYou = () => {
   // Scroll 1: MCQ state
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [showReveal, setShowReveal] = useState(false);
+  const [waitlistSelected, setWaitlistSelected] = useState(false);
 
   const { toast } = useToast();
 
@@ -75,8 +76,11 @@ const NewThankYou = () => {
               <div className="space-y-3" aria-live="polite">
                 <Button
                   type="button"
-                  className="w-full h-11 bg-primary hover:bg-primary/90 text-white font-medium"
+                  variant="outline"
+                  disabled={waitlistSelected}
+                  className="w-full h-11 border-primary/30 text-primary hover:bg-primary hover:text-white font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   onClick={() => {
+                    setWaitlistSelected(true);
                     try { localStorage.setItem('flWaitlistJoined', 'true'); } catch {}
                     toast({
                       title: "🎉 Thanks! You're on the Financial Literacy waitlist.",
@@ -90,8 +94,10 @@ const NewThankYou = () => {
                 <Button
                   type="button"
                   variant="outline"
-                  className="w-full h-11 font-medium"
+                  disabled={waitlistSelected}
+                  className="w-full h-11 border-border hover:bg-muted font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   onClick={() => {
+                    setWaitlistSelected(true);
                     toast({
                       title: 'No problem!',
                       description: 'You can always join later if you change your mind.',
