@@ -59,7 +59,7 @@ const NewThankYou = () => {
             </div>
 
             {/* H1 + Subhead */}
-            <h1 className="text-3xl md:text-4xl font-bold leading-snug mb-2">
+            <h1 className="text-xl md:text-2xl font-bold leading-snug mb-2">
               Up next: our <span className="text-primary">Financial Literacy Curriculum</span>—designed to make learning money skills fun and lasting.
             </h1>
             <p className="text-sm md:text-base text-muted-foreground mb-4">
