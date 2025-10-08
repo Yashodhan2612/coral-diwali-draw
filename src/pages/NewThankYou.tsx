@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/enhanced-button';
-import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star, CheckCircle, TrendingUp, Wallet, Target, Lightbulb } from 'lucide-react';
+import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star, CheckCircle, TrendingUp, Wallet, ShoppingCart, Landmark } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import flImage from '@/assets/financial-literacy-class.jpg';
 import { useToast } from '@/hooks/use-toast';
@@ -82,10 +82,10 @@ const NewThankYou = () => {
                 {/* Learning Outcome 1 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <TrendingUp className="h-5 w-5" />
+                    <ShoppingCart className="h-5 w-5" />
                   </div>
                   <p className="text-sm text-foreground pt-2">
-                    Understanding how money grows — savings, interest, and compounding
+                    Understand how choices, prices, and money shape our economy.
                   </p>
                 </div>
 
@@ -95,27 +95,27 @@ const NewThankYou = () => {
                     <Wallet className="h-5 w-5" />
                   </div>
                   <p className="text-sm text-foreground pt-2">
-                    Building smart spending and budgeting habits
+                    Develop smart budgeting, saving, and responsible spending habits.
                   </p>
                 </div>
 
                 {/* Learning Outcome 3 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <Target className="h-5 w-5" />
+                    <Landmark className="h-5 w-5" />
                   </div>
                   <p className="text-sm text-foreground pt-2">
-                    Learning how to set financial goals and make informed choices
+                    Learn to borrow, invest, and manage money wisely.
                   </p>
                 </div>
 
                 {/* Learning Outcome 4 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <Lightbulb className="h-5 w-5" />
+                    <TrendingUp className="h-5 w-5" />
                   </div>
                   <p className="text-sm text-foreground pt-2">
-                    Exploring real-world scenarios like earning, investing, and giving
+                    Discover how investing early and compounding multiply your returns.
                   </p>
                 </div>
               </div>
@@ -189,10 +189,10 @@ const NewThankYou = () => {
                 {/* Learning Outcome 1 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <TrendingUp className="h-5 w-5" />
+                    <ShoppingCart className="h-5 w-5" />
                   </div>
                   <p className="text-sm text-foreground pt-2">
-                    Understanding how money grows — savings, interest, and compounding
+                    Understand how choices, prices, and money shape our economy.
                   </p>
                 </div>
 
@@ -202,27 +202,27 @@ const NewThankYou = () => {
                     <Wallet className="h-5 w-5" />
                   </div>
                   <p className="text-sm text-foreground pt-2">
-                    Building smart spending and budgeting habits
+                    Develop smart budgeting, saving, and responsible spending habits.
                   </p>
                 </div>
 
                 {/* Learning Outcome 3 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <Target className="h-5 w-5" />
+                    <Landmark className="h-5 w-5" />
                   </div>
                   <p className="text-sm text-foreground pt-2">
-                    Learning how to set financial goals and make informed choices
+                    Learn to borrow, invest, and manage money wisely.
                   </p>
                 </div>
 
                 {/* Learning Outcome 4 */}
                 <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <Lightbulb className="h-5 w-5" />
+                    <TrendingUp className="h-5 w-5" />
                   </div>
                   <p className="text-sm text-foreground pt-2">
-                    Exploring real-world scenarios like earning, investing, and giving
+                    Discover how investing early and compounding multiply your returns.
                   </p>
                 </div>
               </div>
