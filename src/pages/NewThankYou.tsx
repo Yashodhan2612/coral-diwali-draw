@@ -64,34 +64,44 @@ const NewThankYou = () => {
             <p className="text-sm md:text-base text-muted-foreground mb-4">
               Be first to know when enrollment opens—limited spots.
             </p>
-
-
-
-
           </div>
 
           {/* Right column: Join Waitlist panel */}
           <div className="mt-6 lg:mt-0 lg:border-l border-border lg:pl-12 mx-auto max-w-xl">
             <div className="rounded-xl border border-primary/20 bg-card p-4 md:p-6 text-center">
-              <h2 className="text-lg md:text-xl font-semibold mb-1">Join the Financial Literacy Class Waitlist</h2>
-              <p className="text-sm text-muted-foreground mb-4">We’ll email dates & priority slots. Opt out anytime.</p>
+              <h2 className="text-lg md:text-xl font-semibold mb-2">Would you like to join the Financial Literacy Curriculum waitlist?</h2>
+              <p className="text-sm text-muted-foreground mb-6">We'll email class dates and priority slots. You can opt out anytime.</p>
 
               <div className="space-y-3" aria-live="polite">
                 <Button
                   type="button"
-                  className="w-full h-10 bg-primary hover:bg-primary/90 text-white font-medium"
+                  className="w-full h-11 bg-primary hover:bg-primary/90 text-white font-medium"
                   onClick={() => {
                     try { localStorage.setItem('flWaitlistJoined', 'true'); } catch {}
                     toast({
-                      title: '🎉 Thanks! You’re on the Financial Literacy waitlist.',
-                      description: 'We’ll send session dates and early-access slots soon.',
+                      title: "🎉 Thanks! You're on the Financial Literacy waitlist.",
+                      description: "We'll send session dates and early-access slots soon.",
                       duration: 10000,
                     });
                   }}
                 >
-                  Join Waitlist
+                  Yes! Count me in
                 </Button>
-                <p className="text-xs text-muted-foreground text-center">We’ll only send class updates—no spam.</p>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-full h-11 font-medium"
+                  onClick={() => {
+                    toast({
+                      title: 'No problem!',
+                      description: 'You can always join later if you change your mind.',
+                      duration: 5000,
+                    });
+                  }}
+                >
+                  No, not interested
+                </Button>
+                <p className="text-xs text-muted-foreground text-center pt-2">We'll only send class updates—no spam.</p>
               </div>
 
               {/* Secondary links */}
