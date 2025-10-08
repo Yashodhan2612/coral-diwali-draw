@@ -138,8 +138,8 @@ const NewThankYou = () => {
                     setWaitlistSelected(true);
                     try { localStorage.setItem('flWaitlistJoined', 'true'); } catch {}
                     toast({
-                      title: "Thank you for exploring our Financial Literacy Curriculum!",
-                      description: "If you found it interesting, visit www.coralacademy.com to discover more exciting, ongoing classes for your child. 🌟",
+                      title: "Thanks for your response!",
+                      description: "Visit www.coralacademy.com to discover more exciting classes for your child. 🌟",
                       duration: 10000,
                     });
                   }}
@@ -154,8 +154,8 @@ const NewThankYou = () => {
                   onClick={() => {
                     setWaitlistSelected(true);
                     toast({
-                      title: "Thank you for exploring our Financial Literacy Curriculum!",
-                      description: "If you found it interesting, visit www.coralacademy.com to discover more exciting, ongoing classes for your child. 🌟",
+                      title: "Thanks for your response!",
+                      description: "Visit www.coralacademy.com to discover more exciting classes for your child. 🌟",
                       duration: 10000,
                     });
                   }}
