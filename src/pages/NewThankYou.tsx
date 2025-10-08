@@ -62,8 +62,8 @@ const NewThankYou = () => {
             <h1 className="text-xl md:text-2xl font-bold leading-snug mb-2">
               Coming soon: a <span className="text-primary">Financial Literacy Curriculum</span> Designed and Backed by <span className="relative inline-block">
                 Stanford Alums & Professors
-                <svg className="absolute left-0 -bottom-1 w-full" viewBox="0 0 300 8" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 5 Q75 0, 150 5 T300 5" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.7" strokeLinecap="round"/>
+                <svg className="absolute left-[5%] -bottom-1 w-[90%]" viewBox="0 0 300 10" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6 Q150 0, 300 6" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.7" strokeLinecap="round"/>
                 </svg>
               </span>
             </h1>
