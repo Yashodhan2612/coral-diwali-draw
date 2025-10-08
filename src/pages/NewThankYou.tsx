@@ -80,41 +80,41 @@ const NewThankYou = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {/* Learning Outcome 1 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
+                <div className="flex items-center gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <ShoppingCart className="h-5 w-5" />
                   </div>
-                  <p className="text-sm text-foreground pt-2">
+                  <p className="text-sm text-foreground">
                     Understand how choices, prices, and money shape our economy.
                   </p>
                 </div>
 
                 {/* Learning Outcome 2 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
+                <div className="flex items-center gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Wallet className="h-5 w-5" />
                   </div>
-                  <p className="text-sm text-foreground pt-2">
+                  <p className="text-sm text-foreground">
                     Develop smart budgeting, saving, and responsible spending habits.
                   </p>
                 </div>
 
                 {/* Learning Outcome 3 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
+                <div className="flex items-center gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Landmark className="h-5 w-5" />
                   </div>
-                  <p className="text-sm text-foreground pt-2">
+                  <p className="text-sm text-foreground">
                     Learn to borrow, invest, and manage money wisely.
                   </p>
                 </div>
 
                 {/* Learning Outcome 4 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
+                <div className="flex items-center gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <TrendingUp className="h-5 w-5" />
                   </div>
-                  <p className="text-sm text-foreground pt-2">
+                  <p className="text-sm text-foreground">
                     Discover how investing early and compounding multiply your returns.
                   </p>
                 </div>
@@ -187,41 +187,41 @@ const NewThankYou = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {/* Learning Outcome 1 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
+                <div className="flex items-center gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <ShoppingCart className="h-5 w-5" />
                   </div>
-                  <p className="text-sm text-foreground pt-2">
+                  <p className="text-sm text-foreground">
                     Understand how choices, prices, and money shape our economy.
                   </p>
                 </div>
 
                 {/* Learning Outcome 2 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
+                <div className="flex items-center gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Wallet className="h-5 w-5" />
                   </div>
-                  <p className="text-sm text-foreground pt-2">
+                  <p className="text-sm text-foreground">
                     Develop smart budgeting, saving, and responsible spending habits.
                   </p>
                 </div>
 
                 {/* Learning Outcome 3 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
+                <div className="flex items-center gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <Landmark className="h-5 w-5" />
                   </div>
-                  <p className="text-sm text-foreground pt-2">
+                  <p className="text-sm text-foreground">
                     Learn to borrow, invest, and manage money wisely.
                   </p>
                 </div>
 
                 {/* Learning Outcome 4 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg transition-colors">
+                <div className="flex items-center gap-3 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
                     <TrendingUp className="h-5 w-5" />
                   </div>
-                  <p className="text-sm text-foreground pt-2">
+                  <p className="text-sm text-foreground">
                     Discover how investing early and compounding multiply your returns.
                   </p>
                 </div>
