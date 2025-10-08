@@ -124,7 +124,7 @@ const NewThankYou = () => {
           {/* Right column: Join Waitlist panel */}
           <div className="mt-6 lg:mt-0 lg:border-l border-border lg:pl-12 mx-auto max-w-xl">
             <div className="rounded-xl border border-primary/20 bg-card p-4 md:p-6 text-center">
-              <h2 className="text-lg md:text-xl font-semibold mb-2">Would you like to join the Financial Literacy Curriculum waitlist?</h2>
+              <h2 className="text-lg md:text-xl font-semibold mb-2">Interested in joining the waitlist for our upcoming Financial Literacy Class?</h2>
               <p className="text-sm text-muted-foreground mb-6">We'll email class dates and priority slots. You can opt out anytime.</p>
 
               <div className="space-y-3" aria-live="polite">
