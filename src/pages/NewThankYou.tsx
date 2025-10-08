@@ -112,14 +112,14 @@ const NewThankYou = () => {
 
               {/* Secondary links */}
               <div className="mt-4 flex items-center justify-center gap-4 text-sm">
+                <a href="https://www.coralacademy.com" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground" rel="noopener noreferrer">
+                  <Globe className="h-4 w-4" /> Visit Coral Academy
+                </a>
                 <a href="#" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground">
                   <Instagram className="h-4 w-4" /> Instagram
                 </a>
                 <a href="#" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground">
                   <Facebook className="h-4 w-4" /> Facebook
-                </a>
-                <a href="https://www.coralacademy.com" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground" rel="noopener noreferrer">
-                  <Globe className="h-4 w-4" /> Visit Coral Academy
                 </a>
               </div>
             </div>
