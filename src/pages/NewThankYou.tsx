@@ -47,7 +47,7 @@ const NewThankYou = () => {
       {/* Responsive layout: stacks on mobile, 2-column on desktop */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl lg:grid lg:grid-cols-2 lg:gap-12">
-          {/* Left column: Hero + Image + MCQ + USPs */}
+          {/* Left column: Hero + Learning Outcomes */}
           <div className="max-w-xl mx-auto text-center">
             {/* Thank You Message */}
             <div className="w-full mb-6">
@@ -65,6 +65,55 @@ const NewThankYou = () => {
             <p className="text-sm md:text-base text-muted-foreground mb-4">
               Be first to know when enrollment opens—limited spots.
             </p>
+
+            {/* Learning Outcomes Section */}
+            <div className="mt-8 rounded-xl border border-border bg-card/50 p-4 md:p-6">
+              <h3 className="text-lg md:text-xl font-semibold text-center mb-4">
+                What your child will learn in our Financial Literacy Curriculum
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {/* Learning Outcome 1 */}
+                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <TrendingUp className="h-5 w-5" />
+                  </div>
+                  <p className="text-sm text-foreground pt-2">
+                    Understanding how money grows — savings, interest, and compounding
+                  </p>
+                </div>
+
+                {/* Learning Outcome 2 */}
+                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <Wallet className="h-5 w-5" />
+                  </div>
+                  <p className="text-sm text-foreground pt-2">
+                    Building smart spending and budgeting habits
+                  </p>
+                </div>
+
+                {/* Learning Outcome 3 */}
+                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <Target className="h-5 w-5" />
+                  </div>
+                  <p className="text-sm text-foreground pt-2">
+                    Learning how to set financial goals and make informed choices
+                  </p>
+                </div>
+
+                {/* Learning Outcome 4 */}
+                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <Lightbulb className="h-5 w-5" />
+                  </div>
+                  <p className="text-sm text-foreground pt-2">
+                    Exploring real-world scenarios like earning, investing, and giving
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right column: Join Waitlist panel */}
@@ -121,55 +170,6 @@ const NewThankYou = () => {
                 <a href="#" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground">
                   <Facebook className="h-4 w-4" /> Facebook
                 </a>
-              </div>
-            </div>
-
-            {/* Learning Outcomes Section */}
-            <div className="mt-8 rounded-xl border border-border bg-card/50 p-4 md:p-6">
-              <h3 className="text-lg md:text-xl font-semibold text-center mb-4">
-                What your child will learn in our Financial Literacy Curriculum
-              </h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {/* Learning Outcome 1 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <TrendingUp className="h-5 w-5" />
-                  </div>
-                  <p className="text-sm text-foreground pt-2">
-                    Understanding how money grows — savings, interest, and compounding
-                  </p>
-                </div>
-
-                {/* Learning Outcome 2 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <Wallet className="h-5 w-5" />
-                  </div>
-                  <p className="text-sm text-foreground pt-2">
-                    Building smart spending and budgeting habits
-                  </p>
-                </div>
-
-                {/* Learning Outcome 3 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <Target className="h-5 w-5" />
-                  </div>
-                  <p className="text-sm text-foreground pt-2">
-                    Learning how to set financial goals and make informed choices
-                  </p>
-                </div>
-
-                {/* Learning Outcome 4 */}
-                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                    <Lightbulb className="h-5 w-5" />
-                  </div>
-                  <p className="text-sm text-foreground pt-2">
-                    Exploring real-world scenarios like earning, investing, and giving
-                  </p>
-                </div>
               </div>
             </div>
           </div>
