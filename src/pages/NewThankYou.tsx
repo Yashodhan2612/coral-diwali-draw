@@ -95,7 +95,7 @@ const NewThankYou = () => {
                   type="button"
                   variant="outline"
                   disabled={waitlistSelected}
-                  className="w-full h-11 border-border hover:bg-muted font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full h-11 border-red-200 text-foreground hover:text-red-600 hover:border-red-300 hover:bg-transparent font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   onClick={() => {
                     setWaitlistSelected(true);
                     toast({
