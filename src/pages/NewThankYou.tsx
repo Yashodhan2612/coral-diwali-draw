@@ -63,7 +63,7 @@ const NewThankYou = () => {
               Coming soon: a <span className="text-primary">Financial Literacy Curriculum</span> Designed and Backed by <span className="relative inline-block">
                 Stanford Alums & Professors
                 <svg className="absolute left-0 -bottom-1 w-full" viewBox="0 0 300 8" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 4 Q75 1, 150 4 T300 4" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.7" strokeLinecap="round"/>
+                  <path d="M0 5 Q75 0, 150 5 T300 5" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.7" strokeLinecap="round"/>
                 </svg>
               </span>
             </h1>
