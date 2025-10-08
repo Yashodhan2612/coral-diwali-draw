@@ -45,10 +45,10 @@ const USPChips = () => {
           {usps.map((usp, index) => (
             <div
               key={index}
-              className={`flex items-center gap-3 px-4 py-3 rounded-full border ring-1 ring-border/50 dark:ring-border/60 text-sm font-medium transition-all duration-200 hover:scale-105 ${usp.color}`}
+              className={`flex items-center justify-center sm:justify-start gap-3 px-4 py-3 rounded-full border ring-1 ring-border/50 dark:ring-border/60 text-sm font-medium transition-all duration-200 hover:scale-105 ${usp.color}`}
             >
               <usp.icon className={`h-5 w-5 flex-shrink-0 ${usp.iconColor} drop-shadow-[0_0_6px_currentColor]`} />
-              <span className="[text-shadow:0_0_1px_rgba(0,0,0,0.12)] dark:[text-shadow:0_0_1px_rgba(255,255,255,0.06)] text-left leading-tight">{usp.text}</span>
+              <span className="[text-shadow:0_0_1px_rgba(0,0,0,0.12)] dark:[text-shadow:0_0_1px_rgba(255,255,255,0.06)] text-center sm:text-left leading-tight">{usp.text}</span>
             </div>
           ))}
         </div>
