@@ -59,10 +59,10 @@ const NewThankYou = () => {
 
             {/* H1 + Subhead */}
             <h1 className="text-3xl md:text-4xl font-bold leading-snug mb-2">
-              Could your child explain compound interest like this?
+              Up next: our <span className="text-primary">Financial Literacy Curriculum</span>—designed to make learning money skills fun and lasting.
             </h1>
             <p className="text-sm md:text-base text-muted-foreground mb-4">
-              After a few fun sessions, they will—confidently.
+              Be first to know when enrollment opens—limited spots.
             </p>
 
 
