@@ -125,48 +125,48 @@ const NewThankYou = () => {
             </div>
 
             {/* Learning Outcomes Section */}
-            <div className="mt-8 rounded-xl border border-border bg-card/50 p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-semibold text-center mb-6">
+            <div className="mt-8 rounded-xl border border-border bg-card/50 p-4 md:p-6">
+              <h3 className="text-lg md:text-xl font-semibold text-center mb-4">
                 What your child will learn in our Financial Literacy Curriculum
               </h3>
               
-              <div className="space-y-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {/* Learning Outcome 1 */}
-                <div className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
-                    <TrendingUp className="h-6 w-6" />
+                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <TrendingUp className="h-5 w-5" />
                   </div>
-                  <p className="text-sm md:text-base text-foreground">
+                  <p className="text-sm text-foreground pt-2">
                     Understanding how money grows — savings, interest, and compounding
                   </p>
                 </div>
 
                 {/* Learning Outcome 2 */}
-                <div className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
-                    <Wallet className="h-6 w-6" />
+                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <Wallet className="h-5 w-5" />
                   </div>
-                  <p className="text-sm md:text-base text-foreground">
+                  <p className="text-sm text-foreground pt-2">
                     Building smart spending and budgeting habits
                   </p>
                 </div>
 
                 {/* Learning Outcome 3 */}
-                <div className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
-                    <Target className="h-6 w-6" />
+                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <Target className="h-5 w-5" />
                   </div>
-                  <p className="text-sm md:text-base text-foreground">
+                  <p className="text-sm text-foreground pt-2">
                     Learning how to set financial goals and make informed choices
                   </p>
                 </div>
 
                 {/* Learning Outcome 4 */}
-                <div className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-accent/50 transition-colors">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
-                    <Lightbulb className="h-6 w-6" />
+                <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
+                    <Lightbulb className="h-5 w-5" />
                   </div>
-                  <p className="text-sm md:text-base text-foreground">
+                  <p className="text-sm text-foreground pt-2">
                     Exploring real-world scenarios like earning, investing, and giving
                   </p>
                 </div>
