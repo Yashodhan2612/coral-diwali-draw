@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/enhanced-button';
-import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star, CheckCircle } from 'lucide-react';
+import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star, CheckCircle, TrendingUp, Wallet, Target, Lightbulb } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import flImage from '@/assets/financial-literacy-class.jpg';
 import { useToast } from '@/hooks/use-toast';
@@ -121,6 +121,55 @@ const NewThankYou = () => {
                 <a href="#" className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground">
                   <Facebook className="h-4 w-4" /> Facebook
                 </a>
+              </div>
+            </div>
+
+            {/* Learning Outcomes Section */}
+            <div className="mt-8 rounded-xl border border-border bg-card/50 p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-semibold text-center mb-6">
+                What your child will learn in our Financial Literacy Curriculum
+              </h3>
+              
+              <div className="space-y-5">
+                {/* Learning Outcome 1 */}
+                <div className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
+                    <TrendingUp className="h-6 w-6" />
+                  </div>
+                  <p className="text-sm md:text-base text-foreground">
+                    Understanding how money grows — savings, interest, and compounding
+                  </p>
+                </div>
+
+                {/* Learning Outcome 2 */}
+                <div className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
+                    <Wallet className="h-6 w-6" />
+                  </div>
+                  <p className="text-sm md:text-base text-foreground">
+                    Building smart spending and budgeting habits
+                  </p>
+                </div>
+
+                {/* Learning Outcome 3 */}
+                <div className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
+                    <Target className="h-6 w-6" />
+                  </div>
+                  <p className="text-sm md:text-base text-foreground">
+                    Learning how to set financial goals and make informed choices
+                  </p>
+                </div>
+
+                {/* Learning Outcome 4 */}
+                <div className="flex flex-col items-center text-center gap-3 p-4 rounded-lg hover:bg-accent/50 transition-colors">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
+                    <Lightbulb className="h-6 w-6" />
+                  </div>
+                  <p className="text-sm md:text-base text-foreground">
+                    Exploring real-world scenarios like earning, investing, and giving
+                  </p>
+                </div>
               </div>
             </div>
           </div>
