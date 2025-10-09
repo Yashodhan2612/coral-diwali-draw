@@ -49,13 +49,14 @@ const NewThankYou = () => {
         <div className="container mx-auto max-w-6xl lg:grid lg:grid-cols-2 lg:gap-12">
           {/* Left column: Hero + Learning Outcomes (desktop only shows outcomes here) */}
           <div className="max-w-xl mx-auto text-center">
-            {/* Thank You Message */}
-            <div className="w-full mb-6">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <CheckCircle className="h-6 w-6 text-green-500" />
-                <p className="text-lg font-medium text-foreground">Thanks for your participation</p>
-              </div>
-              <div className="w-16 h-px bg-border mx-auto"></div>
+            {/* Step 2 Heading */}
+            <div className="w-full mb-8">
+              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                Step 2: Choose an option below to complete your Diwali event entry.
+              </h2>
+              <p className="text-sm text-muted-foreground italic">
+                A confirmation email will be sent once done!
+              </p>
             </div>
 
             {/* H1 + Subhead */}
