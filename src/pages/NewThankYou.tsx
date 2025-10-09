@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/enhanced-button';
-import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star, CheckCircle, TrendingUp, Wallet, ShoppingCart, Landmark } from 'lucide-react';
+import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star, CheckCircle, TrendingUp, Wallet, ShoppingCart, Landmark, ChevronDown } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import flImage from '@/assets/financial-literacy-class.jpg';
 import { useToast } from '@/hooks/use-toast';
@@ -51,12 +51,16 @@ const NewThankYou = () => {
           <div className="max-w-xl mx-auto text-center">
             {/* Step 2 Heading */}
             <div className="w-full mb-8">
-              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2">
-                Step 2: Choose an option below to complete your Diwali event entry.
-              </h2>
-              <p className="text-sm text-muted-foreground italic">
+              <div className="flex items-start gap-3 justify-center mb-2">
+                <ChevronDown className="h-6 w-6 text-primary mt-1 animate-bounce" />
+                <h2 className="text-xl md:text-2xl font-bold text-foreground">
+                  Step 2: Choose an option below to complete your Diwali event entry.
+                </h2>
+              </div>
+              <p className="text-sm text-muted-foreground italic mb-4">
                 A confirmation email will be sent once done!
               </p>
+              <div className="w-16 h-px bg-border mx-auto"></div>
             </div>
 
             {/* H1 + Subhead */}
