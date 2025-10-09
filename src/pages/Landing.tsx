@@ -24,7 +24,7 @@ const Landing = () => {
               >
                 <h1 className="mb-4" data-testid="hero-heading">
                   <div className="text-2xl font-bold mb-1">
-                    Celebrate Diwali with Coral Academy
+                    Celebrate Diwali with <span style={{ color: '#F65F2B' }}>Coral</span> <span style={{ color: '#1F8299' }}>Academy</span>
                   </div>
                   <div className="text-lg italic font-medium text-muted-foreground">
                     Win amazing prizes
@@ -58,7 +58,7 @@ const Landing = () => {
             >
               <h1 className="mb-6" data-testid="hero-heading">
                 <div className="text-4xl font-bold mb-2">
-                  Celebrate Diwali with Coral Academy
+                  Celebrate Diwali with <span style={{ color: '#F65F2B' }}>Coral</span> <span style={{ color: '#1F8299' }}>Academy</span>
                 </div>
                 <div className="text-2xl italic font-medium text-muted-foreground">
                   Win amazing prizes

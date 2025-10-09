@@ -248,7 +248,7 @@ const NewRaffleForm = () => {
                   Submitting...
                 </>
               ) : (
-                'Submit Entry'
+                'Continue to Step 2'
               )}
             </Button>
 
