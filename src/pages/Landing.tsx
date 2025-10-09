@@ -22,18 +22,13 @@ const Landing = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                <h1 className="text-3xl font-bold mb-4" data-testid="hero-heading">
-                  Celebrate{' '}
-                  <span className="text-primary">
-                    Diwali
-                  </span>{' '}
-                  with{' '}
-                  <span className="text-primary">Coral</span>{' '}
-                  <span className="text-secondary">Academy</span>{' '}
-                  -{' '}
-                  <span className="text-yellow">
-                    Win Amazing Prizes
-                  </span>
+                <h1 className="mb-4" data-testid="hero-heading">
+                  <div className="text-2xl font-bold mb-1">
+                    Celebrate Diwali with Coral Academy
+                  </div>
+                  <div className="text-lg italic font-medium text-muted-foreground">
+                    Win amazing prizes
+                  </div>
                 </h1>
               </motion.div>
 
@@ -61,19 +56,13 @@ const Landing = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <h1 className="text-hero mb-6" data-testid="hero-heading">
-                Celebrate{' '}
-                <span className="text-primary">
-                  Diwali
-                </span>{' '}
-                with{' '}
-                <span className="text-primary">Coral</span>{' '}
-                <span className="text-secondary">Academy</span>{' '}
-                —{' '}
-                <span className="text-yellow">
-                  Win Amazing Prizes
-                </span>{' '}
-                & Enjoy VR Fun
+              <h1 className="mb-6" data-testid="hero-heading">
+                <div className="text-4xl font-bold mb-2">
+                  Celebrate Diwali with Coral Academy
+                </div>
+                <div className="text-2xl italic font-medium text-muted-foreground">
+                  Win amazing prizes
+                </div>
               </h1>
             </motion.div>
 
