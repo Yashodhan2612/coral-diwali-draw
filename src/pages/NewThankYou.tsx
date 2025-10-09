@@ -61,11 +61,13 @@ const NewThankYou = () => {
             {/* H1 + Subhead */}
             <h1 className="text-xl md:text-2xl font-bold leading-snug mb-2">
               Coming soon: <span className="text-primary">Finance 101</span><br />
-              Designed and Backed by <span className="relative inline-block">
-                Stanford Alums & Professors
-                <svg className="absolute left-[5%] -bottom-1 w-[90%]" viewBox="0 0 300 10" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 6 Q150 0, 300 6" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" opacity="0.7" strokeLinecap="round"/>
-                </svg>
+              <span className="text-sm md:text-base font-normal text-muted-foreground">
+                Designed and Backed by <span className="relative inline-block">
+                  Stanford Alums & Professors
+                  <svg className="absolute left-[5%] -bottom-1 w-[90%]" viewBox="0 0 300 10" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 6 Q150 0, 300 6" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" fill="none" opacity="0.5" strokeLinecap="round"/>
+                  </svg>
+                </span>
               </span>
             </h1>
             <p className="text-sm md:text-base text-muted-foreground mb-4">
@@ -125,7 +127,7 @@ const NewThankYou = () => {
           {/* Right column: Join Waitlist panel */}
           <div className="mt-6 lg:mt-0 lg:border-l border-border lg:pl-12 mx-auto max-w-xl">
             <div className="rounded-xl border border-primary/20 bg-card p-4 md:p-6 text-center">
-              <h2 className="text-lg md:text-xl font-semibold mb-2">Interested in joining the waitlist for our upcoming Financial Literacy Class?</h2>
+              <h2 className="text-lg md:text-xl font-semibold mb-2">Interested in joining the waitlist for our upcoming Finance 101 class?</h2>
               <p className="text-sm text-muted-foreground mb-6">We'll email class dates and priority slots. You can opt out anytime.</p>
 
               <div className="space-y-3" aria-live="polite">
