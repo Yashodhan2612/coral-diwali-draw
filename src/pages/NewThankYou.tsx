@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/enhanced-button';
-import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star, CheckCircle, TrendingUp, Wallet, ShoppingCart, Landmark, ChevronDown } from 'lucide-react';
+import { Instagram, Facebook, Globe, DollarSign, GamepadIcon, Star, CheckCircle, TrendingUp, Wallet, ShoppingCart, Landmark } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import flImage from '@/assets/financial-literacy-class.jpg';
 import { useToast } from '@/hooks/use-toast';
@@ -49,17 +49,12 @@ const NewThankYou = () => {
         <div className="container mx-auto max-w-6xl lg:grid lg:grid-cols-2 lg:gap-12">
           {/* Left column: Hero + Learning Outcomes (desktop only shows outcomes here) */}
           <div className="max-w-xl mx-auto text-center">
-            {/* Step 2 Heading */}
-            <div className="w-full mb-8">
-              <div className="flex items-start gap-3 justify-center mb-2">
-                <ChevronDown className="h-6 w-6 text-primary mt-1 animate-bounce" />
-                <h2 className="text-xl md:text-2xl font-bold text-foreground">
-                  Step 2: Choose an option below to complete your Diwali event entry.
-                </h2>
+            {/* Thank You Message */}
+            <div className="w-full mb-6">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <CheckCircle className="h-6 w-6 text-green-500" />
+                <p className="text-lg font-medium text-foreground">Thanks for your participation</p>
               </div>
-              <p className="text-sm text-muted-foreground italic mb-4">
-                A confirmation email will be sent once done!
-              </p>
               <div className="w-16 h-px bg-border mx-auto"></div>
             </div>
 
