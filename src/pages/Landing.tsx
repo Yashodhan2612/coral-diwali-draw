@@ -11,7 +11,7 @@ const Landing = () => {
       <Navbar />
       
       {/* Hero Section - 2-Column Layout */}
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-24 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           {/* Mobile Layout */}
           <div className="lg:hidden">
